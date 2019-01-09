@@ -1,9 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-
+import { css } from '@emotion/core'
 import Header from './header'
 import './layout.css'
+
+const color = css`
+  color: white;
+  transform: translate(300px, 670px);
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -29,10 +34,9 @@ const Layout = ({ children }) => (
           }}
         >
           {children}
-          <footer>
-            © {new Date().getFullYear()}, Built with
+          <footer css={color}>
+            © {new Date().getFullYear()}, Designed by Randy Calderon
             {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
         </div>
       </>

@@ -1,33 +1,40 @@
-import { Link } from 'gatsby'
+import { Link } from '@reach/router'
+import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+
+const mainContainer = css`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+`
+
+const navStyling = css`
+width: 250px;
+display: flex;
+justify-content: space-between;
+list-style-type: none;
+padding-right: 20px;
+line-height: 2;
+`
+const remove = css`
+  text-decoration: none;
+  color: white;
+  &:hover {
+    border-bottom: 1px solid white;
+  }
+`
+
+const Header = () => (
+  <div css={mainContainer}>
+    <nav>
+      <ul css={navStyling}>
+        <li><Link css={remove} to={'/posts'}>Posts</Link></li>
+        <li><Link css={remove} to={'/projects'}>Projects</Link></li>
+        <li><Link css={remove} to={'/about'}>About</Link></li>
+      </ul>
+    </nav>
   </div>
 )
 
