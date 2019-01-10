@@ -7,13 +7,13 @@ import React from 'react'
 const mainContainer = css`
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 `
 
 const navStyling = css`
 width: 250px;
 display: flex;
-justify-content: space-between;
+justify-content: space-evenly;
 list-style-type: none;
 padding-right: 20px;
 line-height: 2;
@@ -26,8 +26,13 @@ const remove = css`
   }
 `
 
+const font = css`
+  font-family: 'Qwigley', cursive;
+  color: white;
+`
 const Header = () => (
   <div css={mainContainer}>
+    <h1 css={font}>Randy Calderon</h1>
     <nav>
       <ul css={navStyling}>
         <li><Link css={remove} to={'/posts'}>Posts</Link></li>
