@@ -12,7 +12,7 @@ const color = css`
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 90%;
 `
 
