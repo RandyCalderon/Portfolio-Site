@@ -34,7 +34,7 @@ const IndexPage = () => (
   <div css={background}>
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <p css={margin}>FrontEnd Web Developer passionate about UI/UX, education and environmentalism <Link css={arrow} to='/projects'></Link></p>
+      <p css={margin}>FrontEnd Web Developer passionate about UI/UX, education and environmentalism <Link css={arrow} to='/about'></Link></p>
     </Layout>
   </div>
 )

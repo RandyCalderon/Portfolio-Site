@@ -8,6 +8,8 @@ const mainContainer = css`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  background: black;
+  height: 60px;
 `
 
 const navStyling = css`
@@ -16,7 +18,7 @@ display: flex;
 justify-content: space-evenly;
 list-style-type: none;
 padding-right: 20px;
-line-height: 2;
+line-height: 3;
 `
 const remove = css`
   text-decoration: none;
@@ -29,7 +31,10 @@ const remove = css`
 const font = css`
   font-family: 'Qwigley', cursive;
   color: white;
+  line-height: 1.5;
 `
+
+
 const Header = () => (
   <div css={mainContainer}>
     <h1 css={font}>Randy Calderon</h1>
