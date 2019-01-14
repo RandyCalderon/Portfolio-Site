@@ -3,6 +3,8 @@ import Layout from '../components/layout'
 import { css } from '@emotion/core'
 import { FaTwitter, FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
+import Email from '../components/email'
+import { env } from '../config'
 
 const color = css`
   margin-top: 100px;
@@ -33,7 +35,6 @@ const iconSize = css`
   width: 35px;
 `
 
-
 const text = css`
 display: flex;
 flex-direction: column;
@@ -46,8 +47,15 @@ flex-direction: column;
 `
 const contactDetails = css`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  width: 290px;
   `
+
+const contactinfo = css`
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+`
 
 const contactText = css`
   padding-bottom: 25px;
@@ -70,11 +78,14 @@ const About = () => {
           <p>Hi, my name is Randy Calderon and I'm a FrontEnd Web Developer located in Southern California with an interest in animation and solving the challenge of providing the best user experience programmatically. My dream is to one day be able to work in a setting where my work can affect the education model in a positive way and/or bring more awareness to our environmental issues.</p>
           <h3>Contact Me</h3>
           <div css={contactDetails}>
-            <FaPhone css={iconSize} /> <h3>Phone</h3>
+            <h3><FaPhone css={iconSize} />Phone</h3>
+            <h3><MdEmail css={iconSize} /> Email</h3>
+          </div>
+          <div css={contactinfo}>
             <span css={contactText}>818-284-5384</span>
-            <MdEmail css={iconSize} /> <h3>Email</h3>
             <span>randycweb@gmail.com</span>
           </div>
+          <Email env={env} />
         </div>
       </div>
     </Layout>
