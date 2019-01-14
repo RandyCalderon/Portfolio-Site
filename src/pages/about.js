@@ -4,7 +4,6 @@ import { css } from '@emotion/core'
 import { FaTwitter, FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import Email from '../components/email'
-import { env } from '../config'
 
 const color = css`
   margin-top: 100px;
@@ -85,7 +84,7 @@ const About = () => {
             <span css={contactText}>818-284-5384</span>
             <span>randycweb@gmail.com</span>
           </div>
-          <Email env={env} />
+          <Email />
         </div>
       </div>
     </Layout>

@@ -3,6 +3,7 @@ import { css } from '@emotion/core'
 import * as emailjs from 'emailjs-com'
 
 
+
 const contactContainer = css`
 padding-top: 20px;
 display: flex;
@@ -32,8 +33,6 @@ export default class Email extends Component {
     })
   }
 
-  static sender = 'sender@example.com';
-
   handleChange = (event) => {
     this.setState({
       contactinfo: event.target.value
@@ -43,15 +42,10 @@ export default class Email extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    const {
-      REACT_APP_EMAILJS_RECEIVER: receiverEmail,
-      REACT_APP_EMAILJS_TEMPLATEID: template
-    } = this.props.env;
-
     this.sendEmail(
-      template,
-      this.sender,
-      receiverEmail,
+      process.env.GATSBY_EMAILJS_USERID,
+      process.env.GATSBY_EMAILJS_RECEIVER,
+      process.env.GATSBY_EMAILJS_TEMPLATEID,
       this.state.contactinfo
     );
 
@@ -60,20 +54,22 @@ export default class Email extends Component {
     })
   }
 
-  sendEmail(template, senderEmail, receiverEmail, contactinfo) {
-    emailjs.send('mailgun', template, {
-      senderEmail,
-      receiverEmail,
+  sendEmail(template, receiverEmail, userID, contactinfo) {
+    let receiver = process.env.GATSBY_EMAILJS_RECEIVER
+    emailjs.send('mailgun', process.env.GATSBY_EMAILJS_TEMPLATEID, {
+      receiver,
       contactinfo
-    }).then(res => {
-      console.log('Success!', res.status, res.text)
+    }, process.env.GATSBY_EMAILJS_USERID).then(res => {
+      alert('Message has been sent')
       this.setState({
         emailSent: true
       })
+      this.handleCancel()
     }).catch(err => {
-      console.error('Failed to send feedback. Error:', err.message)
+      console.error('Failed to send email. Error:', err.message)
     })
   }
+
 
   render() {
     return (
