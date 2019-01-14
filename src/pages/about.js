@@ -4,6 +4,7 @@ import { css } from '@emotion/core'
 import { FaTwitter, FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import Email from '../components/email'
+import pdfobject from 'pdfobject'
 
 const color = css`
   margin-top: 100px;
@@ -71,6 +72,7 @@ const About = () => {
             <a css={links} href='https://www.linkedin.com/in/randy-calderon-237474161/' target='__blank'><FaLinkedin css={iconSize} /></a>
             <a css={links} href='https://github.com/RandyCalderon' target='__blank'><FaGithub css={iconSize} /></a>
           </div>
+          <h3>Resume</h3>
         </div>
         <div css={text}>
           <h2>About Me</h2>
