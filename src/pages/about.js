@@ -10,6 +10,7 @@ const color = css`
   margin-top: 100px;
   color: black;
   display: flex;
+  width: 100%;
 `
 const imgStyle = css`
   border-radius: 50%;
@@ -24,6 +25,7 @@ const icons = css`
   display: flex;
   justify-content: space-evenly;
   margin-left: 25px;
+  padding-bottom: 10px;
 `
 
 const links = css`
@@ -61,6 +63,15 @@ const contactText = css`
   padding-bottom: 25px;
 `
 
+const resume = css`
+  border-radius: 2.5px;
+  height: 30px;
+  width: 120px;
+  border: 1px solid black;
+  margin: 0 auto;
+`
+
+
 const About = () => {
   return (
     <Layout>
@@ -72,7 +83,7 @@ const About = () => {
             <a css={links} href='https://www.linkedin.com/in/randy-calderon-237474161/' target='__blank'><FaLinkedin css={iconSize} /></a>
             <a css={links} href='https://github.com/RandyCalderon' target='__blank'><FaGithub css={iconSize} /></a>
           </div>
-          <h3>Resume</h3>
+          <h3 css={resume}>Resume</h3>
         </div>
         <div css={text}>
           <h2>About Me</h2>
