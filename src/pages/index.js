@@ -10,23 +10,21 @@ const background = css`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
-  overflow:hidden;
 `
 
 const margin = css`
   margin-top: 200px;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 2;
 `
 const arrow = css`
   border: solid white; 
-  border-width: 0 3px 3px 0;
+  border-width: 0 6px 6px 0;
   display: inline-block;
-  padding: 5px;
+  padding: 18px;
   line-height: 2;
-  transform: rotate(-45deg);
+  transform: translate(-500px, 200px) rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 `
 
@@ -34,7 +32,8 @@ const IndexPage = () => (
   <div css={background}>
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <p css={margin}>FrontEnd Web Developer passionate about UI/UX, education and environmentalism <Link css={arrow} to='/about'></Link></p>
+      <p css={margin}>FrontEnd Web Developer passionate about UI/UX</p>
+      <p><Link css={arrow} to='/about'></Link></p>
     </Layout>
   </div>
 )

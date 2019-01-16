@@ -5,15 +5,16 @@ import { css } from '@emotion/core'
 import Header from './header'
 import './layout.css'
 
-const color = css`
+const layout = css`
+  align-items: center;
+  max-width: 100%;
   text-align: center;
-  max-width: 960px;
   margin: 0 auto;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 90%;
+  height: 100vh;
 `
 
 const Layout = ({ children }) => (
@@ -32,7 +33,7 @@ const Layout = ({ children }) => (
         <Header
           siteTitle={data.site.siteMetadata.title} />
         <div
-          css={color}
+          css={layout}
         >
           {children}
           <footer>

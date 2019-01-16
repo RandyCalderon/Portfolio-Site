@@ -19,6 +19,8 @@ const buttonContainer = css`
 const textarea = css`
   width: 500px;
   height: 150px;
+  color: black;
+  opacity: 1;
 `
 
 export default class Email extends Component {
