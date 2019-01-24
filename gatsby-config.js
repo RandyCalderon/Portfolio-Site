@@ -30,10 +30,19 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        fieldName: `cms`,
+        url: `https://api-uswest.graphcms.com/v1/cjr9il4ll3hv801bl69nn0z90/master`,
+        typeName: `GraphCMS`,
+        refetchInterval: 60,
+      },
+    },
+    {
       resolve: `gatsby-plugin-emotion`,
       options: {
         // Accepts all options defined by`babel-plugin-emotion` plugin.
-      }
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline

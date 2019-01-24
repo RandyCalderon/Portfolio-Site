@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout'
 import { css } from '@emotion/core'
-import { FaTwitter, FaLinkedin, FaGithub, FaPhone, FaRegIdBadge, FaGratipay } from 'react-icons/fa'
+import { FaTwitter, FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import PDFObject from 'pdfobject'
 import pdf from '../resume/Randy Calderon-Resume.pdf'
 import Email from '../components/email'
-
-
 
 const color = css`
   color: black;
@@ -43,13 +41,13 @@ const iconSize = css`
 `
 
 const text = css`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
   font-family: 'Ubuntu', sans-serif;
   padding-left: 30px;
   width: 700px;
-  text-align:justify;
-  text-justify:inter-word;
+  text-align: justify;
+  text-justify: inter-word;
   font-size: 20px;
   vertical-align: top;
 `
@@ -57,7 +55,7 @@ const contactDetails = css`
   display: flex;
   justify-content: space-between;
   width: 290px;
-  `
+`
 
 const contactinfo = css`
   display: flex;
@@ -92,7 +90,7 @@ export default class About extends Component {
   constructor() {
     super()
     this.state = {
-      isOpen: false
+      isOpen: false,
     }
   }
 
@@ -100,41 +98,82 @@ export default class About extends Component {
     let options = {
       height: '800px',
       width: '800px',
-      pdfOpenParams: { view: 'FitV' }
+      pdfOpenParams: { view: 'FitV' },
     }
 
     PDFObject.embed(pdf, '#pdf', options)
 
-
     this.setState({
-      isOpen: true
+      isOpen: true,
     })
-
   }
-
 
   render() {
     return (
       <Layout>
-        <div css={modal} id='pdf'></div>
-        <div style={{ backgroundColor: this.state.isOpen ? 'rgba(0,0,0,0.4)' : '', height: this.state.isOpen ? 'calc(100vh - 60px)' : '', boxSizing: this.stateisOpen ? 'border-box' : '' }} css={color}>
+        <div css={modal} id="pdf" />
+        <div
+          style={{
+            backgroundColor: this.state.isOpen ? 'rgba(0,0,0,0.4)' : '',
+            height: this.state.isOpen ? 'calc(100vh - 60px)' : '',
+            boxSizing: this.stateisOpen ? 'border-box' : '',
+          }}
+          css={color}
+        >
           <div css={aboutWrapper}>
             <div css={leftcontent}>
-              <img css={imgStyle} src='https://res.cloudinary.com/deqko80pg/image/upload/c_fit,h_250,r_0,w_250,x_0,y_0/v1547202723/Randy.jpg' alt="profilepic" />
+              <img
+                css={imgStyle}
+                src="https://res.cloudinary.com/deqko80pg/image/upload/c_fit,h_250,r_0,w_250,x_0,y_0/v1547202723/Randy.jpg"
+                alt="profilepic"
+              />
               <div css={icons}>
-                <a css={links} href='https://twitter.com/RandyCdev' target='__blank'><FaTwitter css={iconSize} /></a>
-                <a css={links} href='https://www.linkedin.com/in/randy-calderon-237474161/' target='__blank'><FaLinkedin css={iconSize} /></a>
-                <a css={links} href='https://github.com/RandyCalderon' target='__blank'><FaGithub css={iconSize} /></a>
+                <a
+                  css={links}
+                  href="https://twitter.com/RandyCdev"
+                  target="__blank"
+                >
+                  <FaTwitter css={iconSize} />
+                </a>
+                <a
+                  css={links}
+                  href="https://www.linkedin.com/in/randy-calderon-237474161/"
+                  target="__blank"
+                >
+                  <FaLinkedin css={iconSize} />
+                </a>
+                <a
+                  css={links}
+                  href="https://github.com/RandyCalderon"
+                  target="__blank"
+                >
+                  <FaGithub css={iconSize} />
+                </a>
               </div>
-              <button css={resume} onClick={this.handleClick}>Resume</button>
+              <button css={resume} onClick={this.handleClick}>
+                Resume
+              </button>
             </div>
             <div css={text}>
               <h2>About Me</h2>
-              <p>Hi, my name is Randy Calderon and I'm a FrontEnd Web Developer located in Southern California with an interest in animation and solving the challenge of providing the best user experience programmatically. My dream is to one day be able to work in a setting where my work can affect the education model in a positive way and/or bring more awareness to our environmental issues.</p>
+              <p>
+                Hi, my name is Randy Calderon and I'm a FrontEnd Web Developer
+                located in Southern California with an interest in animation and
+                solving the challenge of providing the best user experience
+                programmatically. My dream is to one day be able to work in a
+                setting where my work can affect the education model in a
+                positive way and/or bring more awareness to our environmental
+                issues.
+              </p>
               <h3>Contact Me</h3>
               <div css={contactDetails}>
-                <h3><FaPhone css={iconSize} />Phone</h3>
-                <h3><MdEmail css={iconSize} /> Email</h3>
+                <h3>
+                  <FaPhone css={iconSize} />
+                  Phone
+                </h3>
+                <h3>
+                  <MdEmail css={iconSize} /> Email
+                </h3>
               </div>
               <div css={contactinfo}>
                 <span css={contactText}>818-284-5384</span>
@@ -144,7 +183,7 @@ export default class About extends Component {
             </div>
           </div>
         </div>
-      </Layout >
+      </Layout>
     )
   }
 }
