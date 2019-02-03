@@ -24,7 +24,7 @@ const aboutWrapper = css`
 `
 
 const icons = css`
-  width: 200px;
+  max-width: 200px;
   display: flex;
   justify-content: space-evenly;
   margin-left: 25px;
@@ -36,8 +36,8 @@ const links = css`
 `
 
 const iconSize = css`
-  height: 35px;
-  width: 35px;
+  height: 25px;
+  width: 25px;
 `
 
 const text = css`
@@ -54,18 +54,23 @@ const text = css`
 const contactDetails = css`
   display: flex;
   justify-content: space-between;
-  width: 290px;
+  flex-direction: column;
+  width: 650px;
 `
-
-const contactinfo = css`
+const contactInfo = css`
   display: flex;
   justify-content: space-between;
-  width: 400px;
+`
+const flex = css`
+  display: flex;
 `
 
-const contactText = css`
-  padding-bottom: 25px;
+const iconContainer = css`
+  display: flex;
+  justify-content: space-between;
+  width: 536px;
 `
+
 const modal = css`
   position: fixed;
   top: 50%;
@@ -165,19 +170,22 @@ export default class About extends Component {
                 positive way and/or bring more awareness to our environmental
                 issues.
               </p>
-              <h3>Contact Me</h3>
               <div css={contactDetails}>
-                <h3>
-                  <FaPhone css={iconSize} />
-                  Phone
-                </h3>
-                <h3>
-                  <MdEmail css={iconSize} /> Email
-                </h3>
-              </div>
-              <div css={contactinfo}>
-                <span css={contactText}>818-284-5384</span>
-                <span>randycweb@gmail.com</span>
+                <h3>Contact Me</h3>
+                <div css={iconContainer}>
+                  <div css={flex}>
+                    <FaPhone css={iconSize} />
+                    <h3>Phone</h3>
+                  </div>
+                  <div css={flex}>
+                    <MdEmail css={iconSize} />
+                    <h3>Email</h3>
+                  </div>
+                </div>
+                <div css={contactInfo}>
+                  <p>818-284-5384</p>
+                  <p>randycweb@gmail.com</p>
+                </div>
               </div>
               <Email />
             </div>

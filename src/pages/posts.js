@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 
 const color = css`
@@ -11,9 +11,17 @@ const Posts = ({ data }) => {
   const posts = data.cms.assets
   return (
     <Layout>
-      <div>
-        {posts.map(post => {
-          return <h1>{post.title}</h1>
+      <div css={color}>
+        {posts.map((post, i) => {
+          return (
+            <div>
+              <h3>{post.title}</h3>
+              <p>{post.body.join('').slice(0, 55) + '...'}</p>
+              <Link to={post.title} key={i}>
+                Click
+              </Link>
+            </div>
+          )
         })}
       </div>
     </Layout>

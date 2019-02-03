@@ -2,12 +2,10 @@ import React, { Component } from 'react'
 import { css } from '@emotion/core'
 import * as emailjs from 'emailjs-com'
 
-
-
 const contactContainer = css`
-padding-top: 20px;
-display: flex;
-flex-direction: column;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
 `
 const buttonContainer = css`
   display: flex;
@@ -23,55 +21,68 @@ const textarea = css`
   opacity: 1;
 `
 
+const button = css`
+  width: 100%;
+  min-width: 100px;
+  max-width: 200px;
+`
+
 export default class Email extends Component {
   state = {
     contactinfo: '',
-    emailSubmitted: false
-  };
+    emailSubmitted: false,
+  }
 
   handleCancel = () => {
     this.setState({
-      contactinfo: ''
+      contactinfo: '',
     })
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({
-      contactinfo: event.target.value
+      contactinfo: event.target.value,
     })
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+  handleSubmit = event => {
+    event.preventDefault()
 
     this.sendEmail(
       process.env.GATSBY_EMAILJS_USERID,
       process.env.GATSBY_EMAILJS_RECEIVER,
       process.env.GATSBY_EMAILJS_TEMPLATEID,
       this.state.contactinfo
-    );
+    )
 
     this.setState({
-      emailSubmitted: true
+      emailSubmitted: true,
     })
   }
 
   sendEmail(template, receiverEmail, userID, contactinfo) {
     let receiver = process.env.GATSBY_EMAILJS_RECEIVER
-    emailjs.send('mailgun', process.env.GATSBY_EMAILJS_TEMPLATEID, {
-      receiver,
-      contactinfo
-    }, process.env.GATSBY_EMAILJS_USERID).then(res => {
-      alert('Message has been sent')
-      this.setState({
-        emailSent: true
+    emailjs
+      .send(
+        'mailgun',
+        process.env.GATSBY_EMAILJS_TEMPLATEID,
+        {
+          receiver,
+          contactinfo,
+        },
+        process.env.GATSBY_EMAILJS_USERID
+      )
+      .then(res => {
+        alert('Message has been sent')
+        this.setState({
+          emailSent: true,
+        })
+        this.handleCancel()
       })
-      this.handleCancel()
-    }).catch(err => {
-      console.error('Failed to send email. Error:', err.message)
-    })
+      .catch(err => {
+        console.error('Failed to send email. Error:', err.message)
+      })
   }
-
 
   render() {
     return (
@@ -82,15 +93,16 @@ export default class Email extends Component {
           name="contactinfo"
           onChange={this.handleChange}
           placeholder="Enter your message here"
-          required value={this.state.contactinfo}
+          required
+          value={this.state.contactinfo}
         />
         <div css={buttonContainer}>
-          <input type="submit" value="Submit" />
-          <button onClick={this.handleCancel}>Clear</button>
+          <input css={button} type="submit" value="Submit" />
+          <button css={button} onClick={this.handleCancel}>
+            Clear
+          </button>
         </div>
       </form>
     )
   }
 }
-
-
