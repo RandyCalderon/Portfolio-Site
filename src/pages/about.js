@@ -20,6 +20,7 @@ const imgStyle = css`
 const aboutWrapper = css`
   display: flex;
   margin: 0 auto;
+  width: 960px;
   padding-top: 40px;
 `
 
@@ -50,6 +51,7 @@ const text = css`
   text-justify: inter-word;
   font-size: 20px;
   vertical-align: top;
+  height: 100%;
 `
 const contactDetails = css`
   display: flex;
@@ -68,7 +70,6 @@ const flex = css`
 const iconContainer = css`
   display: flex;
   justify-content: space-between;
-  width: 536px;
 `
 
 const modal = css`
@@ -79,11 +80,11 @@ const modal = css`
 `
 const resume = css`
   border-radius: 2.5px;
-  height: 30px;
   width: 100px;
   border: 1px solid black;
   margin: 0 auto;
   background: white;
+  min-height: 25px;
 `
 
 const leftcontent = css`

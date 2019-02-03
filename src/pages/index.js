@@ -12,6 +12,7 @@ const background = css`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100vh;
 `
 
 const margin = css`
@@ -19,7 +20,6 @@ const margin = css`
   font-size: 30px;
   font-weight: 700;
   line-height: 2;
-  width: 700px;
 `
 const arrow = css`
   border: solid white;

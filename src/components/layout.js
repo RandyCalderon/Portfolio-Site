@@ -13,8 +13,7 @@ const layout = css`
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+  justify-content: flex-end;
 `
 
 const Layout = ({ children }) => (
@@ -30,11 +29,8 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header
-          siteTitle={data.site.siteMetadata.title} />
-        <div
-          css={layout}
-        >
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div css={layout}>
           {children}
           <footer>
             © {new Date().getFullYear()}, Designed by Randy Calderon

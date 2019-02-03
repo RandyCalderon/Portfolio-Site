@@ -15,16 +15,21 @@ const buttonContainer = css`
 `
 
 const textarea = css`
-  width: 500px;
-  height: 150px;
+  max-width: 500px;
+  min-height: 200px;
+  mheight: 100%;
   color: black;
   opacity: 1;
 `
 
 const button = css`
   width: 100%;
-  min-width: 100px;
   max-width: 200px;
+  margin-right: 30px;
+  border: 1px solid black;
+  background: white;
+  border-radius: 2px;
+  height: 100%;
 `
 
 export default class Email extends Component {
