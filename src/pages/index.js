@@ -25,19 +25,26 @@ const arrow = css`
   border: solid white;
   border-width: 0 6px 6px 0;
   display: inline-block;
-  padding: 8px;
+  padding: 20px;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+`
+
+// Move arrow
+const move = css`
+  transform: translate(900px, 100px);
 `
 
 const IndexPage = () => (
   <div css={background}>
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <p css={margin}>
+      <div css={margin}>
         <LandingAnimation />
+      </div>
+      <div css={move}>
         <Link css={arrow} to="/about" />
-      </p>
+      </div>
     </Layout>
   </div>
 )

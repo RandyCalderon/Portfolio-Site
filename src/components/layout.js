@@ -13,9 +13,12 @@ const layout = css`
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
 `
-
+const footer = css`
+  font-size: 20px;
+  display: flex;
+`
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -32,7 +35,7 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <div css={layout}>
           {children}
-          <footer>
+          <footer css={footer}>
             © {new Date().getFullYear()}, Designed by Randy Calderon
             {` `}
           </footer>

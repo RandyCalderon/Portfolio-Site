@@ -12,7 +12,6 @@ const color = css`
   display: flex;
   width: 100%;
   box-sizing: border-box;
-  min-height: 100vh;
 `
 const imgStyle = css`
   border-radius: 50%;
