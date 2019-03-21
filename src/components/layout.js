@@ -2,23 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
+import styled from '@emotion/styled'
 import Header from './header'
 import './layout.css'
 
 const layout = css`
-  align-items: center;
-  max-width: 100%;
-  text-align: center;
+  display: flex;
+  min-height: 100vh;
   margin: 0 auto;
-  color: white;
-  display: flex;
   flex-direction: column;
-  justify-content: space;
+  align-items: center;
+  width: 100%;
 `
-const footer = css`
-  font-size: 20px;
-  display: flex;
+const content = css`
+  flex-grow: 1;
 `
+const foot = css`
+  background: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+`
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -32,10 +37,10 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
         <div css={layout}>
-          {children}
-          <footer css={footer}>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <div css={content}>{children}</div>
+          <footer css={foot}>
             © {new Date().getFullYear()}, Designed by Randy Calderon
             {` `}
           </footer>

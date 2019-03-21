@@ -24,6 +24,9 @@ const flex = css`
   width: 100%;
   min-width: 900px;
 `
+const white = css`
+  color: white;
+`
 
 // Pre-animation text
 const description = css``
@@ -31,15 +34,15 @@ class LandingAnimation extends React.PureComponent {
   state = { items: [] }
 
   componentDidMount() {
-    this.setState({ items: ['UI/UX'] })
-    setTimeout(() => this.setState({ items: ['education'] }), 2000)
-    setTimeout(() => this.setState({ items: ['enviromentalism'] }), 4000)
-    setTimeout(() => this.componentDidMount(), 6000)
+    setTimeout(() => this.setState({ items: ['UI/UX'] }), 100)
+    setTimeout(() => this.setState({ items: ['education'] }), 1500)
+    setTimeout(() => this.setState({ items: ['enviromentalism'] }), 2700)
+    setTimeout(() => this.componentDidMount(), 4000)
   }
 
   render() {
     return (
-      <div css={flex}>
+      <div css={[flex, white]}>
         <h2 css={[fontSize, description]}>
           FrontEnd web developer interested in
         </h2>

@@ -32,12 +32,13 @@ const arrow = css`
 
 // Move arrow
 const move = css`
-  transform: translate(900px, 100px);
+  transform: translate(1300px, 100px);
+  width: 100px;
 `
 
 const IndexPage = () => (
   <div css={background}>
-    <Layout>
+    <Layout color="white">
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <div css={margin}>
         <LandingAnimation />
