@@ -14,7 +14,7 @@ const Posts = ({ data }) => {
       <div css={color}>
         {posts.map((post, i) => {
           return (
-            <div>
+            <div key={i}>
               <h3>{post.title}</h3>
               <p>{post.body.join('').slice(0, 55) + '...'}</p>
               <Link to={post.title} key={i}>

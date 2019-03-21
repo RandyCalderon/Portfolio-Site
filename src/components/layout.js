@@ -13,7 +13,7 @@ const layout = css`
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space;
 `
 const footer = css`
   font-size: 20px;

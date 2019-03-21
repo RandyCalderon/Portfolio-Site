@@ -31,7 +31,7 @@ const remove = css`
 const font = css`
   font-family: 'Qwigley', cursive;
   color: white;
-  line-height: 2;
+  line-height: 1.5;
 `
 
 const Header = () => (
