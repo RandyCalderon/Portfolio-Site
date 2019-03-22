@@ -30,6 +30,10 @@ const button = css`
   background: white;
   border-radius: 2px;
   height: 100%;
+  :hover {
+    background-color: black;
+    color: white;
+  }
 `
 
 export default class Email extends Component {

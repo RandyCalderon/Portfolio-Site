@@ -20,6 +20,7 @@ const aboutWrapper = css`
   display: flex;
   margin: 0 auto;
   width: 960px;
+  width: 100%;
   padding-top: 40px;
 `
 
@@ -77,6 +78,7 @@ const modal = css`
   left: 50%;
   transform: translate(-50%, -50%);
 `
+
 const resume = css`
   border-radius: 2.5px;
   width: 100px;

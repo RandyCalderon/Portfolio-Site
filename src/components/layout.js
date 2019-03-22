@@ -18,10 +18,10 @@ const content = css`
   flex-grow: 1;
 `
 const foot = css`
-  background: black;
   color: white;
   width: 100%;
   text-align: center;
+  background: black;
 `
 
 const Layout = ({ children }) => (

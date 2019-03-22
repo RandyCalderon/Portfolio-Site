@@ -9,6 +9,7 @@ const mainContainer = css`
   justify-content: space-between;
   background: black;
   height: 60px;
+  border-bottom: 2px solid white;
 `
 
 const navStyling = css`
