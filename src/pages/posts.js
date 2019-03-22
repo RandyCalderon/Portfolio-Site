@@ -1,31 +1,30 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import PostData from '../components/postdata'
 import { css } from '@emotion/core'
 
-const color = css`
-  color: black;
-`
+class Posts extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      data: [],
+    }
+    console.log(this, this.state.data)
+  }
 
-const Posts = ({ data }) => {
-  const posts = data.cms.assets
-  return (
-    <Layout>
-      <div css={color}>
-        {posts.map((post, i) => {
-          return (
-            <div key={i}>
-              <h3>{post.title}</h3>
-              <p>{post.body.join('').slice(0, 55) + '...'}</p>
-              <Link to={post.title} key={i}>
-                Click
-              </Link>
-            </div>
-          )
-        })}
-      </div>
-    </Layout>
-  )
+  componentDidMount() {
+    this.setState({ data: this.props.data.cms.assets })
+  }
+
+  render() {
+    console.log(this.state)
+    return (
+      <Layout>
+        <PostData posts={this.state.data} />
+      </Layout>
+    )
+  }
 }
 
 export default Posts

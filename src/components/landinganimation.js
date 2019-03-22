@@ -36,7 +36,7 @@ class LandingAnimation extends React.PureComponent {
   componentDidMount() {
     setTimeout(() => this.setState({ items: ['UI/UX'] }), 100)
     setTimeout(() => this.setState({ items: ['education'] }), 1500)
-    setTimeout(() => this.setState({ items: ['enviromentalism'] }), 2700)
+    setTimeout(() => this.setState({ items: ['environmentalism'] }), 2700)
     setTimeout(() => this.componentDidMount(), 4000)
   }
 

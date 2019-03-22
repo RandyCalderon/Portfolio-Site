@@ -3,9 +3,8 @@ import Layout from '../components/layout'
 import { css } from '@emotion/core'
 import { FaTwitter, FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-import PDFObject from 'pdfobject'
-import pdf from '../resume/Randy Calderon-Resume.pdf'
 import Email from '../components/email'
+import PDFModal from '../components/pdfModal'
 
 const color = css`
   color: black;
@@ -103,12 +102,16 @@ export default class About extends Component {
 
   handleClick = () => {
     let options = {
-      height: '800px',
-      width: '800px',
+      height: '100%',
+      width: '100%',
+      overflow: 'auto',
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      left: 0,
+      bottom: 0,
       pdfOpenParams: { view: 'FitV' },
     }
-
-    PDFObject.embed(pdf, '#pdf', options)
 
     this.setState({
       isOpen: true,
@@ -157,9 +160,11 @@ export default class About extends Component {
                   <FaGithub css={iconSize} />
                 </a>
               </div>
-              <button css={resume} onClick={this.handleClick}>
-                Resume
-              </button>
+              <PDFModal
+                css={resume}
+                onClick={this.handleClick}
+                isOpen={this.state.isOpen}
+              />
             </div>
             <div css={text}>
               <h2>About Me</h2>
