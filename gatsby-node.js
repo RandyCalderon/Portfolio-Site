@@ -1,11 +1,24 @@
-// // Implement the Gatsby API “onCreatePage”. This is
-// // called after every page is created.
-// exports.onCreatePage = ({ page, actions }) => {
-//   const { createPage } = actions
-//   // Make the front page match everything client side.
-//   // Normally your paths should be a bit more judicious.
-//   if (page.path === `/`) {
-//     page.matchPath = `/*`
-//     createPage(page)
-//   }
-// }
+const path = require(`path`)
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return graphql(`
+    {
+      cms {
+        postses {
+          slug
+        }
+      }
+    }
+  `).then(result => {
+    result.data.cms.postses.forEach(post => {
+      createPage({
+        path: post.slug,
+        component: path.resolve(`./src/templates/posts.js`),
+        context: {
+          slug: post.slug,
+        },
+      })
+    })
+  })
+}

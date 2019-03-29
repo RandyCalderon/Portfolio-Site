@@ -38,7 +38,7 @@ const move = css`
   position: sticky;
 `
 
-const IndexPage = () => (
+const Home = () => (
   <div css={background}>
     <Layout color="white">
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -52,4 +52,4 @@ const IndexPage = () => (
   </div>
 )
 
-export default IndexPage
+export default Home

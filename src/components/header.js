@@ -41,18 +41,18 @@ const Header = () => (
     <nav>
       <ul css={navStyling}>
         <li>
-          <Link css={remove} to={'/posts'}>
-            Posts
+          <Link css={remove} to={'/about'}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link css={remove} to={'/blog'}>
+            Blog
           </Link>
         </li>
         <li>
           <Link css={remove} to={'/projects'}>
             Projects
-          </Link>
-        </li>
-        <li>
-          <Link css={remove} to={'/about'}>
-            About
           </Link>
         </li>
       </ul>

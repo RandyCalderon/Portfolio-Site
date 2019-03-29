@@ -52,7 +52,7 @@ class LandingAnimation extends React.PureComponent {
             items={this.state.items}
             from={{ width: 0 }}
             enter={{ width: 0 }}
-            leave={{ width: 385 }}
+            leave={{ width: 400 }}
           >
             {item => props => (
               <animated.span
