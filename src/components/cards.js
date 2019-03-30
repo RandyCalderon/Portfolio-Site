@@ -6,8 +6,8 @@ import img from '../images/Anchord.png'
 
 // Card css
 const cardCss = css`
+  width: 900px !important;
   border-radius: 5px;
-  width: 800px;
   font-size: 14px;
   border: 1px solid gray;
   padding: 15px;

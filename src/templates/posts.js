@@ -7,8 +7,8 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h2>{post[0].title}</h2>
-        <p>{post[0].body}</p>
+        <h2 class="ui header">{post[0].title}</h2>
+        <p>{post[0].body.text}</p>
       </div>
     </Layout>
   )
@@ -18,9 +18,21 @@ export const query = graphql`
   query($slug: String!) {
     cms {
       postses(where: { slug: $slug }) {
+        updatedAt
+        createdAt
         title
-        body
         slug
+        postimage {
+          id
+          handle
+          fileName
+          height
+          width
+        }
+        body {
+          text
+        }
+        excerpt
       }
     }
   }

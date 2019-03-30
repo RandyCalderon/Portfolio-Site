@@ -14,7 +14,7 @@ const header = css`
 
 // Css styling for card div
 const cardFlex = css`
-  width: 900px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -27,7 +27,7 @@ const Projects = () => {
   return (
     <Layout css={color}>
       <div>
-        <h2 css={header}>List of Projects</h2>
+        <h2 css={header}>Projects</h2>
       </div>
       <div css={cardFlex}>
         <Cards />
