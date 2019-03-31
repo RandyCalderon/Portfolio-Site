@@ -4,16 +4,6 @@ import { css } from '@emotion/core'
 import { FaGithub } from 'react-icons/fa'
 import img from '../images/Anchord.png'
 
-// Card css
-const cardCss = css`
-  width: 900px !important;
-  border-radius: 5px;
-  font-size: 14px;
-  border: 1px solid gray;
-  padding: 15px;
-  box-shadow: 1px 1px 1px 1px gray;
-`
-
 // Css styling for header for card
 const headerStyle = css`
   font-size: 16px;
@@ -46,7 +36,7 @@ const header = <h2 css={headerStyle}>Anchord App</h2>
 
 // Anchord Project description
 const anchordDesc = (
-  <div>
+  <div class="ui text container">
     <p>
       Anchored utilizes Chainpoint's innovative technology which allows users to
       securely link a hash of their data, such as important documents, to the
@@ -70,7 +60,12 @@ const anchordDesc = (
 )
 
 const cards = () => (
-  <Card css={cardCss} image={img} header={header} description={anchordDesc} />
+  <Card
+    class="ui container"
+    image={img}
+    header={header}
+    description={anchordDesc}
+  />
 )
 
 export default cards

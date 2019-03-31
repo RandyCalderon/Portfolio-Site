@@ -4,6 +4,16 @@ import Layout from '../components/layout'
 import moment from 'moment'
 import { css } from '@emotion/core'
 
+// Styling for main page container
+const wrapper = css`
+  margin-top: 40px;
+`
+
+// Styling for main page header
+const pageHeader = css`
+  font-family: candara;
+`
+
 // Margin for post dates
 const margin = css`
   margin-top: 20px;
@@ -17,18 +27,18 @@ const description = css`
 export default ({ data }) => {
   return (
     <Layout>
-      <div>
-        <h1>Posts</h1>
+      <div css={wrapper}>
+        <h1 css={pageHeader}>Posts</h1>
         <div class="ui items">
           {data.cms.postses.map(post => {
             return (
-              <div class="item">
+              <div class="item ">
                 <div class="ui small image">
                   <img src={post.postimage.url} />
                 </div>
                 <div class="content" key={post.slug}>
                   <Link to={post.slug}>
-                    <h3 class="ui dividing header blue">{post.title}</h3>
+                    <h3 class="ui header blue">{post.title}</h3>
                   </Link>
                   <div css={margin}>
                     <h5>{moment(post.createdAt).format('MMMM DD YYYY')}</h5>

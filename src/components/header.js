@@ -36,7 +36,7 @@ const font = css`
 `
 
 const Header = () => (
-  <div css={mainContainer}>
+  <div class="ui" css={mainContainer}>
     <h1 css={font}>Randy Calderon</h1>
     <nav>
       <ul css={navStyling}>
