@@ -34,6 +34,12 @@ const clean = css`
 // Header config for card
 const header = <h2 css={headerStyle}>Anchord App</h2>
 
+// Main Card Styling
+const card = css`
+  width: 100% !important;
+  max-width: 900px !important;
+`
+
 // Anchord Project description
 const anchordDesc = (
   <div class="ui text container">
@@ -61,6 +67,7 @@ const anchordDesc = (
 
 const cards = () => (
   <Card
+    css={card}
     class="ui container"
     image={img}
     header={header}
