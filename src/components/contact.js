@@ -4,15 +4,15 @@ import { MdEmail } from 'react-icons/md'
 
 const Contact = () => {
   return (
-    <div>
+    <div class="column">
       <h3>Contact Me</h3>
       <div>
-        <span>
-          818-284-5384 <FaPhone />
-        </span>
-        <span>
-          randycweb@gmail.com <MdEmail />
-        </span>
+        <h4>Phone</h4>
+        <FaPhone /> 818-284-5384
+      </div>
+      <div>
+        <h4>Email</h4>
+        <MdEmail /> randycweb@gmail.com
       </div>
     </div>
   )
