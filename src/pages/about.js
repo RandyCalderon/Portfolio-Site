@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { css } from '@emotion/core'
 import Layout from '../components/layout'
-import Contact from '../components/contact'
-import ContactLinks from '../components/contactlinks'
-import Email from '../components/email'
+import Contact from '../components/about/contact'
+import ContactLinks from '../components/about/contactlinks'
+import Email from '../components/about/email'
 
 // Container Margin
 const margin = css`

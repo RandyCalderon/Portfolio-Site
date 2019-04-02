@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import Layout from '../components/layout'
-import Cards from '../components/cards'
+import Cards from '../components/project/cards'
 
 // Margin Container
 const margin = css`

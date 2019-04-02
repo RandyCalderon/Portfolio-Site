@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from '@emotion/core'
 import { Link } from '@reach/router'
 import SEO from '../components/seo'
-import LandingAnimation from '../components/landinganimation'
+import LandingAnimation from '../components/home/landinganimation'
 import Layout from '../components/layout'
 
 const background = css`

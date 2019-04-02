@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from 'semantic-ui-react'
 import { css } from '@emotion/core'
 import { FaGithub } from 'react-icons/fa'
-import img from '../images/Anchord.png'
+import img from '../../images/Anchord.png'
 
 // Css styling for header for card
 const headerStyle = css`
