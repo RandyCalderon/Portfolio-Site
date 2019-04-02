@@ -16,7 +16,7 @@ const animationStyle = css`
 
 // Font-size styling for composition to pass as an array
 const fontSize = css`
-  font-size: 40px;
+  font-size: 30px;
 
   @media screen and (max-width: 1100px) {
     font-size: 16px;
@@ -36,7 +36,7 @@ const white = css`
 // Pre-animation text
 const description = css``
 class LandingAnimation extends React.PureComponent {
-  state = { items: [] }
+  state = { items: ['UI/UX'] }
 
   componentDidMount() {
     setTimeout(() => this.setState({ items: ['UI/UX'] }), 100)
