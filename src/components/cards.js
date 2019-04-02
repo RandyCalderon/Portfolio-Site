@@ -68,7 +68,7 @@ const anchordDesc = (
 const cards = () => (
   <Card
     css={card}
-    class="ui container"
+    class="ui text container"
     image={img}
     header={header}
     description={anchordDesc}

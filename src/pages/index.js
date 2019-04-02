@@ -15,12 +15,13 @@ const background = css`
   height: 100vh;
 `
 
-const margin = css`
+// Container for animation
+const animationContainer = css`
   margin-top: 100px;
   font-size: 30px;
   font-weight: 700;
   line-height: 2;
-  margin-right: 200px;
+  width: 100%;
 `
 const arrow = css`
   border: solid white;
@@ -42,7 +43,7 @@ const Home = () => (
   <div css={background}>
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <div css={margin}>
+      <div css={animationContainer}>
         <LandingAnimation />
       </div>
       <div css={move}>

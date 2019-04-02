@@ -17,6 +17,11 @@ const animationStyle = css`
 // Font-size styling for composition to pass as an array
 const fontSize = css`
   font-size: 40px;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 16px;
+    margin-left: 200px;
+  }
 `
 // Flex styling
 const flex = css`
