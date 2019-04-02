@@ -32,7 +32,7 @@ const clean = css`
 `
 
 // Header config for card
-const header = <h2 css={headerStyle}>Anchord App</h2>
+const header = <h2 css={headerStyle}>Anchored App</h2>
 
 // Main Card Styling
 const card = css`

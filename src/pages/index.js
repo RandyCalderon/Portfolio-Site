@@ -12,7 +12,7 @@ const background = css`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  height: auto;
 `
 
 // Container for animation
