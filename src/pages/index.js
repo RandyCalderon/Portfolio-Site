@@ -42,7 +42,7 @@ const Home = () => (
   <div css={background}>
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <div class="ui" css={margin}>
+      <div css={margin}>
         <LandingAnimation />
       </div>
       <div css={move}>
