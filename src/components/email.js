@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { css } from '@emotion/core'
 import * as emailjs from 'emailjs-com'
 
 export default class Email extends Component {
