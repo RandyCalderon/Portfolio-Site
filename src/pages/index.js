@@ -1,9 +1,9 @@
 import React from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
 import { css } from '@emotion/core'
 import { Link } from '@reach/router'
+import SEO from '../components/seo'
 import LandingAnimation from '../components/landinganimation'
+import Layout from '../components/layout'
 
 const background = css`
   background: url('https://res.cloudinary.com/deqko80pg/image/upload/e_auto_contrast,h_1080,w_1920/v1553208181/portbackground.jpg')
