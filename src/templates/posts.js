@@ -36,7 +36,7 @@ export default ({ data }) => {
         <h2 css={headerSize} class="ui header">
           {post[0].title}
         </h2>
-        <span css={date}>{moment(post.createdAt).format('MMMM DD YYYY')}</span>
+        <span css={date}>{moment(post.updatedAt).format('MMMM DD YYYY')}</span>
         <ReactMarkdown
           escapeHTML={false}
           source={postContent}

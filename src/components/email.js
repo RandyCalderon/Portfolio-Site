@@ -61,18 +61,35 @@ export default class Email extends Component {
 
   render() {
     return (
-      <form class="column" onSubmit={this.handleSubmit}>
+      <form class="ui form success" onSubmit={this.handleSubmit}>
         <h3>Message me</h3>
-        <textarea
-          name="contactinfo"
-          onChange={this.handleChange}
-          placeholder="Enter your message here"
-          required
-          value={this.state.contactinfo}
-        />
+        <div class="inline fields">
+          <div class="eight wide field">
+            <label htmlFor="Name">Name</label>
+            <input type="text" placeholder="Name" name="Name" />
+          </div>
+        </div>
+        <div class="inline fields">
+          <div class="eight wide field">
+            <label htmlFor="Email">Email</label>
+            <input type="text" placeholder="Email" name="Email" />
+          </div>
+        </div>
+        <div class="field">
+          <label htmlFor="contactinfo">Message</label>
+          <textarea
+            name="contactinfo"
+            onChange={this.handleChange}
+            placeholder="Enter your message here"
+            required
+            value={this.state.contactinfo}
+          />
+        </div>
         <div>
           <input type="submit" value="Submit" />
-          <button onClick={this.handleCancel}>Clear</button>
+          <button class="ui secondary button" onClick={this.handleCancel}>
+            Clear
+          </button>
         </div>
       </form>
     )

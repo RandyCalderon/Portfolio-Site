@@ -41,7 +41,7 @@ export default ({ data }) => {
                     <h3 class="ui header blue">{post.title}</h3>
                   </Link>
                   <div css={margin}>
-                    <h5>{moment(post.createdAt).format('MMMM DD YYYY')}</h5>
+                    <h5>{moment(post.updatedAt).format('MMMM DD YYYY')}</h5>
                     <p css={description}>{post.excerpt}</p>
                   </div>
                 </div>
