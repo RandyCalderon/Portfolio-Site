@@ -12,6 +12,8 @@ const wrapper = css`
 // Styling for main page header
 const pageHeader = css`
   font-family: candara;
+  font-weight: 400;
+  color: #2185d0;
 `
 
 // Margin for post dates
@@ -28,7 +30,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div css={wrapper}>
-        <h1 css={pageHeader}>Posts</h1>
+        <h2 css={pageHeader}>Posts</h2>
         <div class="ui items">
           {data.cms.postses.map(post => {
             return (
