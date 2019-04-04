@@ -4,15 +4,11 @@ import Layout from '../components/layout'
 import moment from 'moment'
 import { css } from '@emotion/core'
 
-// Styling for main page container
-const wrapper = css`
-  margin-top: 40px;
-`
-
 // Styling for main page header
 const pageHeader = css`
   font-family: candara;
-  font-weight: 400;
+  font-weight: 600;
+  text-decoration: underline;
   color: #2185d0;
 `
 
@@ -29,7 +25,7 @@ const description = css`
 export default ({ data }) => {
   return (
     <Layout>
-      <div css={wrapper}>
+      <div class="ui basic segment container">
         <h2 css={pageHeader}>Posts</h2>
         <div class="ui items">
           {data.cms.postses.map(post => {

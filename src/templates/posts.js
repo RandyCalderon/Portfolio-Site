@@ -5,12 +5,6 @@ import { css } from '@emotion/core'
 import ReactMarkdown from 'react-markdown'
 import moment from 'moment'
 
-// Styling for width of container
-const width = css`
-  max-width: 900px;
-  margin-top: 80px;
-`
-
 // Styling for font-size of header
 const headerSize = css`
   font-size: 24px;
@@ -23,7 +17,7 @@ const date = css`
 
 // Styling for markdown content
 const contentSize = css`
-  font-size: 20px;
+  font-size: 24px;
   margin-top: 40px;
 `
 
@@ -32,7 +26,7 @@ export default ({ data }) => {
   const postContent = post[0].body.markdown
   return (
     <Layout>
-      <div css={width} class="ui text container">
+      <div class="ui basic segment">
         <h2 css={headerSize} class="ui header">
           {post[0].title}
         </h2>
