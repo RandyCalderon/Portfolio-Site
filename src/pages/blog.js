@@ -42,7 +42,7 @@ export default ({ data }) => {
                   <Link to={post.slug}>
                     <h3 class="ui header blue">{post.title}</h3>
                   </Link>
-                  <div css={margin}>
+                  <div class="ui text container" css={margin}>
                     <h5>{moment(post.updatedAt).format('MMMM DD YYYY')}</h5>
                     <p css={description}>{post.excerpt}</p>
                   </div>
@@ -59,7 +59,7 @@ export default ({ data }) => {
 export const query = graphql`
   query {
     cms {
-      postses {
+      postses(where: { status: PUBLISHED }) {
         title
         excerpt
         createdAt
