@@ -3,64 +3,49 @@ import * as emailjs from 'emailjs-com'
 
 export default class Email extends Component {
   state = {
-    contactinfo: '',
+    message: '',
     emailSubmitted: false,
-    reply_to: '',
-    senderEmail: '',
+    email: '',
+    name: '',
   }
 
-  handleCancel = () => {
+  handleMessage = event => {
     this.setState({
-      contactinfo: '',
-    })
-  }
-
-  handleContact = event => {
-    this.setState({
-      contactinfo: event.target.value,
+      message: event.target.value,
     })
   }
 
   handleName = event => {
     this.setState({
-      from_name: event.target.value,
+      name: event.target.value,
     })
   }
 
-  handleReply = event => {
+  handleEmail = event => {
     this.setState({
-      reply_to: event.target.value,
+      email: event.target.value,
     })
   }
 
   handleSubmit = event => {
     event.preventDefault()
-
-    this.sendEmail(
-      process.env.GATSBY_EMAILJS_USERID,
-      process.env.GATSBY_EMAILJS_RECEIVER,
-      process.env.GATSBY_EMAILJS_TEMPLATEID,
-      this.state.contactinfo,
-      this.state.from_name,
-      this.state.reply_to
-    )
-
+    this.sendEmail(this.state.name, this.state.email, this.state.message)
     this.setState({
       emailSubmitted: true,
     })
   }
 
-  sendEmail(contactinfo, senderEmail, from_name) {
+  sendEmail(name, email, message) {
     let receiver = process.env.GATSBY_EMAILJS_RECEIVER
     emailjs
       .send(
         'mailgun',
         process.env.GATSBY_EMAILJS_TEMPLATEID,
         {
+          name,
+          email,
+          message,
           receiver,
-          contactinfo,
-          reply_to,
-          from_name,
         },
         process.env.GATSBY_EMAILJS_USERID
       )
@@ -69,7 +54,6 @@ export default class Email extends Component {
         this.setState({
           emailSent: true,
         })
-        this.handleCancel()
       })
       .catch(err => {
         console.error('Failed to send email. Error:', err.message)
@@ -88,7 +72,7 @@ export default class Email extends Component {
               placeholder="Name"
               name="Name"
               onChange={this.handleName}
-              value={this.state.from_name}
+              value={this.state.name}
             />
           </div>
         </div>
@@ -99,8 +83,8 @@ export default class Email extends Component {
               type="text"
               placeholder="Email"
               name="Email"
-              onChange={this.handleReply}
-              value={this.state.reply_to}
+              onChange={this.handleEmail}
+              value={this.state.email}
             />
           </div>
         </div>
@@ -108,17 +92,14 @@ export default class Email extends Component {
           <label htmlFor="contactinfo">Message</label>
           <textarea
             name="contactinfo"
-            onChange={this.handleContact}
+            onChange={this.handleMessage}
             placeholder="Enter your message here"
             required
-            value={this.state.contactinfo}
+            value={this.state.message}
           />
         </div>
         <div>
-          <input type="submit" value="Submit" />
-          <button class="ui secondary button" onClick={this.handleCancel}>
-            Clear
-          </button>
+          <input class="ui button" type="submit" value="Submit" />
         </div>
       </form>
     )

@@ -63,8 +63,8 @@ export default class About extends Component {
               <h2>About Me</h2>
               <p css={text}>
                 Hi, my name is Randy Calderon a FrontEnd Web Developer located
-                in Southern California, with an interest in animation and
-                solving the challenge of providing the best user experience
+                in Southern California, with an interest in problem solving and
+                addressing the challenge of providing the best user experience
                 programmatically. My dream is to one day be able to work in a
                 setting where my work can affect the education model in a
                 positive way and/or bring more awareness to our environmental

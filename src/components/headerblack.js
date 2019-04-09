@@ -3,7 +3,6 @@ import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-
 const mainContainerBlack = css`
   width: 100%;
   display: flex;
@@ -12,12 +11,12 @@ const mainContainerBlack = css`
 `
 
 const navStyling = css`
-width: 250px;
-display: flex;
-justify-content: space-evenly;
-list-style-type: none;
-padding-right: 20px;
-line-height: 2;
+  width: 250px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding-right: 20px;
+  line-height: 2;
 `
 const remove = css`
   text-decoration: none;
@@ -32,15 +31,26 @@ const font = css`
   color: white;
 `
 
-
 const HeaderBlack = () => (
   <div css={mainContainerBlack}>
     <h1 css={font}>Randy Calderon</h1>
     <nav>
       <ul css={navStyling}>
-        <li><Link css={remove} to={'/posts'}>Posts</Link></li>
-        <li><Link css={remove} to={'/projects'}>Projects</Link></li>
-        <li><Link css={remove} to={'/about'}>About</Link></li>
+        <li>
+          <Link css={remove} to={'/posts'}>
+            Posts
+          </Link>
+        </li>
+        <li>
+          <Link css={remove} to={'/projects'}>
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link css={remove} to={'/about'}>
+            About
+          </Link>
+        </li>
       </ul>
     </nav>
   </div>
