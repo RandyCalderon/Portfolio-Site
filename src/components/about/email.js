@@ -5,8 +5,8 @@ export default class Email extends Component {
   state = {
     contactinfo: '',
     emailSubmitted: false,
-    from_name: '',
     reply_to: '',
+    senderEmail: '',
   }
 
   handleCancel = () => {
@@ -40,7 +40,9 @@ export default class Email extends Component {
       process.env.GATSBY_EMAILJS_USERID,
       process.env.GATSBY_EMAILJS_RECEIVER,
       process.env.GATSBY_EMAILJS_TEMPLATEID,
-      this.state.contactinfo
+      this.state.contactinfo,
+      this.state.from_name,
+      this.state.reply_to
     )
 
     this.setState({
@@ -48,7 +50,7 @@ export default class Email extends Component {
     })
   }
 
-  sendEmail(template, receiverEmail, userID, contactinfo, reply_to, from_name) {
+  sendEmail(contactinfo, senderEmail, from_name) {
     let receiver = process.env.GATSBY_EMAILJS_RECEIVER
     emailjs
       .send(
