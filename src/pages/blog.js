@@ -25,20 +25,20 @@ const description = css`
 export default ({ data }) => {
   return (
     <Layout>
-      <div class="ui basic segment container">
+      <div className="ui basic segment container">
         <h2 css={pageHeader}>Posts</h2>
-        <div class="ui items">
+        <div className="ui items">
           {data.cms.postses.map(post => {
             return (
-              <div class="item ">
-                <div class="ui small image">
+              <div className="item ">
+                <div className="ui small image">
                   <img src={post.postimage.url} />
                 </div>
-                <div class="content" key={post.slug}>
+                <div className="content" key={post.slug}>
                   <Link to={post.slug}>
-                    <h3 class="ui header blue">{post.title}</h3>
+                    <h3 className="ui header blue">{post.title}</h3>
                   </Link>
-                  <div class="ui text container" css={margin}>
+                  <div className="ui text container" css={margin}>
                     <h5>{moment(post.updatedAt).format('MMMM DD YYYY')}</h5>
                     <p css={description}>{post.excerpt}</p>
                   </div>

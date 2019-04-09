@@ -50,8 +50,8 @@ export default class About extends Component {
     return (
       <Layout>
         <div css={margin}>
-          <div class="ui stackable grid container">
-            <div class="left aligned four wide column">
+          <div className="ui stackable grid container">
+            <div className="left aligned four wide column">
               <img
                 css={clipCircle}
                 src="https://res.cloudinary.com/deqko80pg/image/upload/c_fit,h_250,r_0,w_250,x_0,y_0/v1547202723/Randy.jpg"
@@ -59,7 +59,7 @@ export default class About extends Component {
               />
               <ContactLinks />
             </div>
-            <div class="left aligned twelve wide column">
+            <div className="left aligned twelve wide column">
               <h2>About Me</h2>
               <p css={text}>
                 Hi, my name is Randy Calderon a FrontEnd Web Developer located
@@ -72,11 +72,11 @@ export default class About extends Component {
               </p>
             </div>
           </div>
-          <div class="ui stackable grid container">
-            <div class="left aligned four wide column">
+          <div className="ui stackable grid container">
+            <div className="left aligned four wide column">
               <Contact />
             </div>
-            <div class="left aligned twelve wide column">
+            <div className="left aligned twelve wide column">
               <Email />
             </div>
           </div>

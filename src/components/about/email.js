@@ -62,10 +62,10 @@ export default class Email extends Component {
 
   render() {
     return (
-      <form class="ui form success" onSubmit={this.handleSubmit}>
+      <form className="ui form success" onSubmit={this.handleSubmit}>
         <h3>Message me</h3>
-        <div class="inline fields">
-          <div class="eight wide field">
+        <div className="inline fields">
+          <div className="eight wide field">
             <label htmlFor="Name">Name</label>
             <input
               type="text"
@@ -76,8 +76,8 @@ export default class Email extends Component {
             />
           </div>
         </div>
-        <div class="inline fields">
-          <div class="eight wide field">
+        <div className="inline fields">
+          <div className="eight wide field">
             <label htmlFor="Email">Email</label>
             <input
               type="text"
@@ -88,7 +88,7 @@ export default class Email extends Component {
             />
           </div>
         </div>
-        <div class="field">
+        <div className="field">
           <label htmlFor="contactinfo">Message</label>
           <textarea
             name="contactinfo"
@@ -99,7 +99,7 @@ export default class Email extends Component {
           />
         </div>
         <div>
-          <input class="ui button" type="submit" value="Submit" />
+          <input className="ui button" type="submit" value="Submit" />
         </div>
       </form>
     )

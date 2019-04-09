@@ -26,8 +26,8 @@ export default ({ data }) => {
   const postContent = post[0].body.markdown
   return (
     <Layout>
-      <div class="ui basic segment">
-        <h2 css={headerSize} class="ui header">
+      <div className="ui basic segment">
+        <h2 css={headerSize} className="ui header">
           {post[0].title}
         </h2>
         <span css={date}>{moment(post.updatedAt).format('MMMM DD YYYY')}</span>

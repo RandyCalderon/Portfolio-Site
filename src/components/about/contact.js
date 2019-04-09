@@ -18,8 +18,8 @@ const Contact = () => {
   return (
     <div>
       <h3>Contact Me</h3>
-      <div class="row">
-        <div css={margin} class="column">
+      <div className="row">
+        <div css={margin} className="column">
           <h4>Phone:</h4>
           <FaPhone /> 818-284-5384
           <div css={marginTop}>
