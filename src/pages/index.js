@@ -6,13 +6,13 @@ import LandingAnimation from '../components/home/landinganimation'
 import Layout from '../components/layout'
 
 const background = css`
-  background: url('https://res.cloudinary.com/deqko80pg/image/upload/e_auto_contrast,h_1080,w_1920/v1553208181/portbackground.jpg')
+  background: url('https://res.cloudinary.com/deqko80pg/image/upload/e_blackwhite,e_auto_contrast,h_1080,w_1920/v1554772298/portbackgroundEdit.jpg')
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: auto;
+  -height: auto;
 `
 
 // Container for animation
