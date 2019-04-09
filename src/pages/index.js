@@ -1,6 +1,5 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import { Link } from '@reach/router'
 import SEO from '../components/seo'
 import LandingAnimation from '../components/home/landinganimation'
 import Layout from '../components/layout'
@@ -23,21 +22,6 @@ const animationContainer = css`
   line-height: 2;
   width: 100%;
 `
-const arrow = css`
-  border: solid white;
-  border-width: 0 6px 6px 0;
-  display: inline-block;
-  padding: 15px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-`
-
-// Move arrow
-const move = css`
-  transform: translate(1400px, 200px);
-  width: 100px;
-  position: sticky;
-`
 
 const Home = () => (
   <div css={background}>
@@ -45,9 +29,6 @@ const Home = () => (
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <div css={animationContainer}>
         <LandingAnimation />
-      </div>
-      <div css={move}>
-        <Link css={arrow} to="/about" />
       </div>
     </Layout>
   </div>

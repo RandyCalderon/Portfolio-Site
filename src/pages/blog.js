@@ -7,7 +7,6 @@ import { css } from '@emotion/core'
 // Styling for main page header
 const pageHeader = css`
   font-family: candara;
-  font-weight: 600;
   text-decoration: underline;
   color: #2185d0;
 `
@@ -26,7 +25,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div className="ui basic segment container">
-        <h2 css={pageHeader}>Posts</h2>
+        <h1 css={pageHeader}>Posts</h1>
         <div className="ui items">
           {data.cms.postses.map(post => {
             return (

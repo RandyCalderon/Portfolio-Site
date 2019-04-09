@@ -42,7 +42,7 @@ const card = css`
 
 // Anchord Project description
 const anchordDesc = (
-  <div class="ui text container">
+  <div className="ui text container">
     <p>
       Anchored utilizes Chainpoint's innovative technology which allows users to
       securely link a hash of their data, such as important documents, to the
@@ -68,7 +68,7 @@ const anchordDesc = (
 const cards = () => (
   <Card
     css={card}
-    class="ui text container"
+    clasName="ui text container"
     image={img}
     header={header}
     description={anchordDesc}

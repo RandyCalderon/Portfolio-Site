@@ -31,9 +31,14 @@ const white = css`
 // Pre-animation text
 const description = css``
 class LandingAnimation extends React.PureComponent {
-  state = { items: ['UI/UX'] }
+  constructor(props) {
+    super(props)
+    this.state = { items: ['UI/UX'] }
+    this._isMounted = false
+  }
 
   componentDidMount() {
+    this._isMounted = true
     setTimeout(() => this.setState({ items: ['UI/UX'] }), 100)
     setTimeout(() => this.setState({ items: ['education'] }), 1500)
     setTimeout(() => this.setState({ items: ['environmentalism'] }), 2700)
