@@ -10,6 +10,12 @@ const margin = css`
   margin-top: 40px;
 `
 
+// About me Header
+const header = css`
+  font-type: candara;
+  letter-spacing: 3px;
+`
+
 // About me text
 const text = css`
   font-size: 20px;
@@ -23,27 +29,6 @@ const clipCircle = css`
 export default class About extends Component {
   constructor() {
     super()
-    this.state = {
-      isOpen: false,
-    }
-  }
-
-  handleClick = () => {
-    let options = {
-      height: '100%',
-      width: '100%',
-      overflow: 'auto',
-      position: 'absolute',
-      top: 0,
-      right: 0,
-      left: 0,
-      bottom: 0,
-      pdfOpenParams: { view: 'FitV' },
-    }
-
-    this.setState({
-      isOpen: true,
-    })
   }
 
   render() {
@@ -60,7 +45,7 @@ export default class About extends Component {
               <ContactLinks />
             </div>
             <div className="left aligned twelve wide column">
-              <h2>About Me</h2>
+              <h2 css={header}>About Me</h2>
               <p css={text}>
                 Hi, my name is Randy Calderon a FrontEnd Web Developer located
                 in Southern California, with an interest in problem solving and

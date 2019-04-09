@@ -9,6 +9,9 @@ const pageHeader = css`
   font-family: candara;
   text-decoration: underline;
   color: #2185d0;
+  color: black;
+  font-size: 40px;
+  letter-spacing: 2px;
 `
 
 // Margin for post dates
@@ -18,7 +21,8 @@ const margin = css`
 
 // Styling for post excerpts
 const description = css`
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 700;
 `
 
 export default ({ data }) => {
@@ -29,7 +33,7 @@ export default ({ data }) => {
         <div className="ui items">
           {data.cms.postses.map(post => {
             return (
-              <div className="item ">
+              <div className="item">
                 <div className="ui small image">
                   <img src={post.postimage.url} />
                 </div>
@@ -57,7 +61,7 @@ export const query = graphql`
       postses(where: { status: PUBLISHED }) {
         title
         excerpt
-        createdAt
+        updatedAt
         slug
         postimage {
           handle

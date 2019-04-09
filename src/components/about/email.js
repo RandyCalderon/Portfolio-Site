@@ -66,11 +66,11 @@ export default class Email extends Component {
         <h3>Message me</h3>
         <div className="inline fields">
           <div className="eight wide field">
-            <label htmlFor="Name">Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
-              placeholder="Name"
-              name="Name"
+              placeholder="name"
+              name="name"
               onChange={this.handleName}
               value={this.state.name}
             />
@@ -78,20 +78,20 @@ export default class Email extends Component {
         </div>
         <div className="inline fields">
           <div className="eight wide field">
-            <label htmlFor="Email">Email</label>
+            <label htmlFor="email">Email</label>
             <input
               type="text"
-              placeholder="Email"
-              name="Email"
+              placeholder="email"
+              name="email"
               onChange={this.handleEmail}
               value={this.state.email}
             />
           </div>
         </div>
         <div className="field">
-          <label htmlFor="contactinfo">Message</label>
+          <label htmlFor="message">Message</label>
           <textarea
-            name="contactinfo"
+            name="message"
             onChange={this.handleMessage}
             placeholder="Enter your message here"
             required

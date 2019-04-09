@@ -46,7 +46,6 @@ export const query = graphql`
     cms {
       postses(where: { slug: $slug }) {
         updatedAt
-        createdAt
         title
         slug
         body {
