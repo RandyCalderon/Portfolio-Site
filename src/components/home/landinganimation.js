@@ -16,7 +16,7 @@ const animationStyle = css`
 
 // Font-size styling for composition to pass as an array
 const fontSize = css`
-  font-size: 30px;
+  font-size: 28px;
 `
 // Flex styling
 const flex = css`
