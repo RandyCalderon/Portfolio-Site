@@ -31,7 +31,9 @@ export default ({ data }) => {
     <Layout>
       <div className="ui text container">
         <h2 css={headerSize}>{post[0].title}</h2>
-        <span css={date}>{moment(post.updatedAt).format('MMMM DD YYYY')}</span>
+        <span css={date}>
+          {moment(post[0].createdAt).format('MMMM DD YYYY')}
+        </span>
         <ReactMarkdown
           escapeHTML={false}
           source={postContent}
@@ -46,7 +48,7 @@ export const query = graphql`
   query($slug: String!) {
     cms {
       postses(where: { slug: $slug }) {
-        updatedAt
+        createdAt
         title
         slug
         body {
