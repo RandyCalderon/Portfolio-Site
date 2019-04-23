@@ -29,7 +29,7 @@ export default ({ data }) => {
   const postContent = post[0].body.markdown
   return (
     <Layout>
-      <div className="ui padded text container segment">
+      <div className="ui text container">
         <h2 css={headerSize}>{post[0].title}</h2>
         <span css={date}>{moment(post.updatedAt).format('MMMM DD YYYY')}</span>
         <ReactMarkdown

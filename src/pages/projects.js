@@ -13,7 +13,6 @@ const header = css`
   text-align: center;
   font-family: candara;
   font-weight: 400;
-  color: #2185d0;
 `
 
 const Projects = () => {

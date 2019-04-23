@@ -27,10 +27,6 @@ const clipCircle = css`
 `
 
 export default class About extends Component {
-  constructor() {
-    super()
-  }
-
   render() {
     return (
       <Layout>

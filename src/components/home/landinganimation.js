@@ -33,11 +33,11 @@ const description = css``
 class LandingAnimation extends React.PureComponent {
   constructor(props) {
     super(props)
-    this.state = { items: ['UI/UX'] }
+    this.state = { items: [] }
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({ items: ['UI/UX'] }), 100)
+    setTimeout(() => this.setState({ items: ['UI/UX'] }), 0)
     setTimeout(() => this.setState({ items: ['education'] }), 3000)
     setTimeout(() => this.setState({ items: ['environmentalism'] }), 7000)
     setTimeout(() => this.componentDidMount(), 8600)

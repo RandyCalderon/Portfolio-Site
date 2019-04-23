@@ -55,10 +55,16 @@ const anchordDesc = (
       <a
         href="https://github.com/Lambda-School-Labs/anchored.app"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <FaGithub css={iconSize} />
       </a>
-      <a css={clean} href="https://anchored.app/" target="_blank">
+      <a
+        css={clean}
+        href="https://anchored.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <b>Visit Site</b>
       </a>
     </div>
