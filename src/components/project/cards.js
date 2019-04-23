@@ -37,12 +37,12 @@ const header = <h2 css={headerStyle}>Anchored App</h2>
 // Main Card Styling
 const card = css`
   width: 100% !important;
-  max-width: 900px !important;
+  max-width: 1000px !important;
 `
 
 // Anchord Project description
 const anchordDesc = (
-  <div className="ui text container">
+  <div>
     <p>
       Anchored utilizes Chainpoint's innovative technology which allows users to
       securely link a hash of their data, such as important documents, to the

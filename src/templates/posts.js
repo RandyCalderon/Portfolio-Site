@@ -26,7 +26,7 @@ export default ({ data }) => {
   const postContent = post[0].body.markdown
   return (
     <Layout>
-      <div className="ui basic segment">
+      <div className="ui padded text container segment">
         <h2 css={headerSize} className="ui header">
           {post[0].title}
         </h2>

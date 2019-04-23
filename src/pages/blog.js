@@ -24,13 +24,24 @@ const description = css`
   font-size: 22px;
   font-weight: 700;
 `
+// Styling for post
+const postStyling = css`
+  background-color: #fff;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 5px;
+  padding: 15px;
+`
+// Updated text
+const italic = css`
+  font-style: italic;
+`
 
 export default ({ data }) => {
   return (
     <Layout>
       <div className="ui basic segment container">
         <h1 css={pageHeader}>Posts</h1>
-        <div className="ui items">
+        <div css={postStyling} className="ui items">
           {data.cms.postses.map(post => {
             return (
               <div className="item">
@@ -42,8 +53,12 @@ export default ({ data }) => {
                     <h3 className="ui header blue">{post.title}</h3>
                   </Link>
                   <div className="ui text container" css={margin}>
-                    <h5>{moment(post.updatedAt).format('MMMM DD YYYY')}</h5>
+                    <h5>{moment(post.createdAt).format('MMMM DD YYYY')}</h5>
                     <p css={description}>{post.excerpt}</p>
+                    <h5 css={italic}>
+                      Updated on:{' '}
+                      {moment(post.updatedAt).format('MMMM DD YYYY')}
+                    </h5>
                   </div>
                 </div>
               </div>
@@ -61,6 +76,7 @@ export const query = graphql`
       postses(where: { status: PUBLISHED }) {
         title
         excerpt
+        createdAt
         updatedAt
         slug
         postimage {
