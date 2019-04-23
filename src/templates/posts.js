@@ -7,7 +7,9 @@ import moment from 'moment'
 
 // Styling for font-size of header
 const headerSize = css`
-  font-size: 24px;
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
 `
 
 // Styling for Date
@@ -17,6 +19,7 @@ const date = css`
 
 // Styling for markdown content
 const contentSize = css`
+  font-family: 'Fauna One', serif;
   font-size: 24px;
   margin-top: 40px;
 `
@@ -27,9 +30,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div className="ui padded text container segment">
-        <h2 css={headerSize} className="ui header">
-          {post[0].title}
-        </h2>
+        <h2 css={headerSize}>{post[0].title}</h2>
         <span css={date}>{moment(post.updatedAt).format('MMMM DD YYYY')}</span>
         <ReactMarkdown
           escapeHTML={false}

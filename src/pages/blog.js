@@ -11,7 +11,7 @@ const pageHeader = css`
   color: #2185d0;
   color: black;
   font-size: 40px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 `
 
 // Margin for post dates
@@ -29,7 +29,7 @@ const postStyling = css`
   background-color: #fff;
   box-shadow: 5px 5px 5px gray;
   border-radius: 5px;
-  padding: 15px;
+  padding: 20px;
 `
 // Updated text
 const italic = css`

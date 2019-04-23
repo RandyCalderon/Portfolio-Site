@@ -7,7 +7,6 @@
   "dependencies": {
     "@emotion/core": "^10.0.6",
     "@emotion/styled": "^10.0.6",
-    "@reach/router": "^1.2.1",
     "core-js": "^2.6.2",
     "emailjs-com": "^2.3.2",
     "gatsby": "^2.0.85",

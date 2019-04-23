@@ -1,4 +1,4 @@
-import { Link } from '@reach/router'
+import { Link } from 'gatsby'
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -29,9 +29,10 @@ const remove = css`
   text-decoration: none;
   color: white;
   &:hover {
-    border-bottom: 1px solid white;
+    color: white;
+    border-bottom: 1.5px solid white;
+    padding-bottom: 5px;
   }
-
   @media screen and (max-width: 450px) {
     font-size: 14px;
   }
@@ -56,6 +57,10 @@ const font = css`
     line-height: 3.75;
   }
 `
+const activeStyles = {
+  borderBottom: '1.5px solid white',
+  paddingBottom: '5px',
+}
 
 const Header = () => (
   <div css={mainContainer}>
@@ -63,17 +68,17 @@ const Header = () => (
     <nav>
       <ul css={navStyling}>
         <li>
-          <Link css={remove} to={'/about'}>
+          <Link to={'/about'} css={remove} activeStyle={activeStyles}>
             About
           </Link>
         </li>
         <li>
-          <Link css={remove} to={'/blog'}>
+          <Link to={'/blog'} css={remove} activeStyle={activeStyles}>
             Blog
           </Link>
         </li>
         <li>
-          <Link css={remove} to={'/projects'}>
+          <Link to={'/projects'} css={remove} activeStyle={activeStyles}>
             Projects
           </Link>
         </li>

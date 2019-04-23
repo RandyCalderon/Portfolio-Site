@@ -50,10 +50,9 @@ export default class About extends Component {
                 Hi, my name is Randy Calderon a FrontEnd Web Developer located
                 in Southern California, with an interest in problem solving and
                 addressing the challenge of providing the best user experience
-                programmatically. My dream is to one day be able to work in a
-                setting where my work can affect the education model in a
-                positive way and/or bring more awareness to our environmental
-                issues.
+                programmatically. My dream is to one day work in for company
+                that affects the education model in a positive way and/or bring
+                more awareness to our environmental issues.
               </p>
             </div>
           </div>
