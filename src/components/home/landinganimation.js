@@ -10,7 +10,7 @@ const animationStyle = css`
   animation: typing 6s steps(80, end);
   text-align: left;
   line-height: 1.2;
-  padding-left: 20px;
+  padding-left: 16px;
   position: absolute;
 `
 

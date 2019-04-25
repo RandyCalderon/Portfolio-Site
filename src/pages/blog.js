@@ -34,9 +34,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <div className="ui basic segment container">
-        <div css={postStyling} className="ui items">
-          {data.cms.postses.map(post => {
-            return (
+        {data.cms.postses.map(post => {
+          return (
+            <div css={postStyling} className="ui items">
               <div className="item">
                 <div css={marginRight} className="ui medium image">
                   <img alt={post.postimage.handle} src={post.postimage.url} />
@@ -56,9 +56,9 @@ export default ({ data }) => {
                   </div>
                 </Link>
               </div>
-            )
-          })}
-        </div>
+            </div>
+          )
+        })}
       </div>
     </Layout>
   )
