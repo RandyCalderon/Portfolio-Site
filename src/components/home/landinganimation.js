@@ -63,7 +63,6 @@ class LandingAnimation extends React.PureComponent {
                 children={item}
               />
             )}
-            UI/UX
           </Transition>
         </div>
       </div>
