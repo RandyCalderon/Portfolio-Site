@@ -37,7 +37,6 @@ class LandingAnimation extends React.PureComponent {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({ items: ['UI/UX'] }), 0)
     setTimeout(() => this.setState({ items: ['education'] }), 3000)
     setTimeout(() => this.setState({ items: ['environmentalism'] }), 7000)
     setTimeout(() => this.componentDidMount(), 8600)
@@ -64,6 +63,7 @@ class LandingAnimation extends React.PureComponent {
                 children={item}
               />
             )}
+            UI/UX
           </Transition>
         </div>
       </div>
