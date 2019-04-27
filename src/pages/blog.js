@@ -20,7 +20,6 @@ const postStyling = css`
   background-color: #fff;
   box-shadow: 5px 5px 5px gray;
   border-radius: 5px;
-  padding: 15px;
 `
 // Updated text
 const italic = css`
