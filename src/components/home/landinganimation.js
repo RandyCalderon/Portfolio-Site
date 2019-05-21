@@ -28,42 +28,44 @@ const white = css`
   color: white;
 `
 
-// Pre-animation text
-const description = css``
 class LandingAnimation extends React.PureComponent {
   constructor(props) {
+    console.log(props)
     super(props)
-    this.state = { items: [] }
+    this.state = { items: [], loaded: false }
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({ items: ['education'] }), 3000)
-    setTimeout(() => this.setState({ items: ['environmentalism'] }), 7000)
-    setTimeout(() => this.componentDidMount(), 8600)
+    setTimeout(() => this.setState({ items: ['education'], loaded: true }), 0)
+    setTimeout(() => this.setState({ items: ['environmentalism'] }), 2000)
+    setTimeout(() => this.setState({ items: ['UI/UX'] }), 3600)
+    setTimeout(() => this.componentDidMount(), 5600)
   }
 
   render() {
     return (
       <div css={[flex, white]}>
-        <h2 css={[fontSize, description]}>
-          FrontEnd web developer interested in
-        </h2>
+        {!this.state.loaded ? <h2 css={fontSize}>FrontEnd web developer interested in education</h2>: <h2 css={fontSize}>FrontEnd web developer interested in</h2>}
         <div>
-          <Transition
-            native
-            items={this.state.items}
-            from={{ width: 0 }}
-            enter={{ width: 0 }}
-            leave={{ width: 400 }}
-          >
-            {item => props => (
-              <animated.span
-                css={[fontSize, animationStyle]}
-                style={props}
-                children={item}
-              />
-            )}
-          </Transition>
+          {this.state.loaded === true ? (
+            <Transition
+              native
+              items={this.state.items}
+              from={{ width: 0 }}
+              enter={{ width: 0 }}
+              leave={{ width: 400 }}
+            >
+              {item => props => (
+                <animated.span
+                  css={[fontSize, animationStyle]}
+                  style={props}
+                  children={item}
+                />
+              )}
+            </Transition>
+          ) : (
+            ''
+          )}
         </div>
       </div>
     )

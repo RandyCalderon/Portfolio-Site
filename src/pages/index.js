@@ -16,22 +16,30 @@ const background = css`
 
 // Container for animation
 const animationContainer = css`
-  margin-top: 100px;
+  margin-top: 60px;
   font-size: 30px;
   font-weight: 700;
   line-height: 2;
   width: 100%;
 `
 
-const Home = () => (
+class Home extends React.Component {
+  constructor() {
+    super()
+  }
+
+render() {
+  return(
   <div css={background}>
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <div css={animationContainer}>
-        <LandingAnimation />
+      <LandingAnimation/>
       </div>
     </Layout>
   </div>
-)
+  )
+  }
+}
 
 export default Home
