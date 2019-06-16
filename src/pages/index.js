@@ -1,7 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import SEO from '../components/seo'
-import LandingAnimation from '../components/home/landinganimation'
 import Layout from '../components/layout'
 
 const background = css`
@@ -26,14 +25,6 @@ const animationContainer = css`
 class Home extends React.Component {
   constructor(props) {
     super(props) 
-      this.state = {
-        loaded: false
-      }
-  }
-
-  componentDidMount() {
-    this.setState({ loaded: true})
-
   }
 
 render() {
@@ -42,8 +33,7 @@ render() {
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <div css={animationContainer}>
-
-      {this.state.loaded ? <LandingAnimation loaded={this.state.loaded}/> : <h2>FrontEnd web developer interested in education</h2>} />
+<h2 style={{color: 'white'}}>FrontEnd web developer interested in education, environmentalism and UI/UX</h2>
       </div>
     </Layout>
   </div>
