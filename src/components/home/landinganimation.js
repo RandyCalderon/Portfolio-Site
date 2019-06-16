@@ -4,7 +4,7 @@ import { Transition, animated } from 'react-spring'
 
 // For animation styling
 const animationStyle = css`
-  overflow: hidden;
+  overflow: hidden
   color: white;
   white-space: nowrap;
   animation: typing 6s steps(80, end);
@@ -30,24 +30,23 @@ const white = css`
 
 class LandingAnimation extends React.PureComponent {
   constructor(props) {
-    console.log(props)
     super(props)
-    this.state = { items: [], loaded: false }
+    this.state = { items: [] }
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({ items: ['education'], loaded: true }), 0)
-    setTimeout(() => this.setState({ items: ['environmentalism'] }), 2000)
-    setTimeout(() => this.setState({ items: ['UI/UX'] }), 3600)
-    setTimeout(() => this.componentDidMount(), 5600)
+    setTimeout(() => this.setState({ items: ['education']}), 0)
+    setTimeout(() => this.setState({ items: ['environmentalism'] }), 7000)
+    setTimeout(() => this.setState({ items: ['UI/UX'] }), 11000)
+    setTimeout(() => this.componentDidMount(), 15000)
   }
 
   render() {
     return (
       <div css={[flex, white]}>
-        {!this.state.loaded ? <h2 css={fontSize}>FrontEnd web developer interested in education</h2>: <h2 css={fontSize}>FrontEnd web developer interested in</h2>}
+        <h2 css={fontSize}>FrontEnd web developer interested in</h2>
         <div>
-          {this.state.loaded === true ? (
+        
             <Transition
               native
               items={this.state.items}
@@ -63,9 +62,6 @@ class LandingAnimation extends React.PureComponent {
                 />
               )}
             </Transition>
-          ) : (
-            ''
-          )}
         </div>
       </div>
     )
