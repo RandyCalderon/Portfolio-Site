@@ -20,7 +20,7 @@ const navStyling = css`
   list-style-type: none;
   padding-right: 20px;
   line-height: 3;
-
+  
   @media screen and (max-width: 360px) {
     width: 200px;
   }
@@ -34,7 +34,7 @@ const remove = css`
     padding-bottom: 5px;
   }
   @media screen and (max-width: 450px) {
-    font-size: 14px;
+    font-size: 13.5px;
   }
 
   @media screen and (max-width: 355px) {
