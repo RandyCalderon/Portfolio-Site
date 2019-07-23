@@ -43,7 +43,7 @@ export default class About extends Component {
             <div className="left aligned twelve wide column">
               <h2 css={header}>About Me</h2>
               <p css={text}>
-                Hi, my name is Randy Calderon a FrontEnd Web Developer located
+                Hi, my name is Randy Calderon a Software Engineer located
                 in Southern California, with an interest in problem solving and
                 addressing the challenge of providing the best user experience
                 programmatically. My dream is to one day work for a company

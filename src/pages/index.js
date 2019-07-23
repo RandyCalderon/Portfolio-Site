@@ -24,20 +24,20 @@ const animationContainer = css`
 
 class Home extends React.Component {
   constructor(props) {
-    super(props) 
+    super(props)
   }
 
-render() {
-  return(
-  <div css={background}>
-    <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <div css={animationContainer}>
-<h2 style={{color: 'white'}}>FrontEnd web developer interested in education, environmentalism and UI/UX</h2>
+  render() {
+    return (
+      <div css={background}>
+        <Layout>
+          <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+          <div css={animationContainer}>
+            <h2 style={{ color: 'white' }}>Software Engineer interested in education, environmentalism and UI/UX</h2>
+          </div>
+        </Layout>
       </div>
-    </Layout>
-  </div>
-  )
+    )
   }
 }
 

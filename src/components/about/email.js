@@ -10,21 +10,33 @@ export default class Email extends Component {
   }
 
   handleMessage = event => {
-    this.setState({
-      message: event.target.value,
-    })
+    if (event.target.value == "") {
+      alert("You have not provided a message!")
+    } else {
+      this.setState({
+        message: event.target.value,
+      })
+    }
   }
 
   handleName = event => {
-    this.setState({
-      name: event.target.value,
-    })
+    if (event.target.value == "") {
+      alert("You have not provided a name!")
+    } else {
+      this.setState({
+        name: event.target.value,
+      })
+    }
   }
 
   handleEmail = event => {
-    this.setState({
-      email: event.target.value,
-    })
+    if (event.target.value == "") {
+      alert("You have not provided a email!")
+    } else {
+      this.setState({
+        email: event.target.value,
+      })
+    }
   }
 
   handleSubmit = event => {
