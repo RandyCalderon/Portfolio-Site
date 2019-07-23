@@ -11,7 +11,7 @@ export default class Email extends Component {
 
   handleMessage = event => {
     if (event.target.value == "") {
-      alert("You have not provided a message!")
+      throw "You have not provided a message"
     } else {
       this.setState({
         message: event.target.value,
@@ -21,7 +21,7 @@ export default class Email extends Component {
 
   handleName = event => {
     if (event.target.value == "") {
-      alert("You have not provided a name!")
+      throw "You have not provided a name"
     } else {
       this.setState({
         name: event.target.value,
@@ -31,7 +31,7 @@ export default class Email extends Component {
 
   handleEmail = event => {
     if (event.target.value == "") {
-      alert("You have not provided a email!")
+      throw "You have not provided an email"
     } else {
       this.setState({
         email: event.target.value,
