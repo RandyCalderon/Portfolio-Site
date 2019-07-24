@@ -10,9 +10,6 @@ export default class Email extends Component {
   }
 
   handleMessage = event => {
-    if (event.target.value == "") {
-      throw "You have not provided a message"
-    } else {
       this.setState({
         message: event.target.value,
       })
@@ -20,9 +17,6 @@ export default class Email extends Component {
   }
 
   handleName = event => {
-    if (event.target.value == "") {
-      throw "You have not provided a name"
-    } else {
       this.setState({
         name: event.target.value,
       })
@@ -30,9 +24,6 @@ export default class Email extends Component {
   }
 
   handleEmail = event => {
-    if (event.target.value == "") {
-      throw "You have not provided an email"
-    } else {
       this.setState({
         email: event.target.value,
       })
@@ -41,11 +32,15 @@ export default class Email extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
+    if(this.state.name == "" || this.state.email == "" || this.state.message == "") {
+      alert("Please fill in the empty fields")
+    } else {
     this.sendEmail(this.state.name, this.state.email, this.state.message)
     this.setState({
       emailSubmitted: true,
     })
-  }
+  }  
+}
 
   sendEmail(name, email, message) {
     let receiver = process.env.GATSBY_EMAILJS_RECEIVER
