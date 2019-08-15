@@ -13,14 +13,12 @@ export default class Email extends Component {
       this.setState({
         message: event.target.value,
       })
-    }
   }
 
   handleName = event => {
       this.setState({
         name: event.target.value,
       })
-    }
   }
 
   handleEmail = event => {
@@ -28,7 +26,6 @@ export default class Email extends Component {
         email: event.target.value,
       })
     }
-  }
 
   handleSubmit = event => {
     event.preventDefault()

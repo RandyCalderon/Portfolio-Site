@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { css } from '@emotion/core'
-import Layout from '../components/layout'
-import Contact from '../components/about/contact'
-import ContactLinks from '../components/about/contactlinks'
-import Email from '../components/about/email'
+import Contact from '../about/contact'
+import ContactLinks from '../about/contactlinks'
+import Email from '../about/email'
 
 // Container Margin
 const margin = css`
@@ -29,7 +28,6 @@ const clipCircle = css`
 export default class About extends Component {
   render() {
     return (
-      <Layout>
         <div css={margin}>
           <div className="ui stackable grid container">
             <div className="left aligned four wide column">
@@ -61,7 +59,6 @@ export default class About extends Component {
             </div>
           </div>
         </div>
-      </Layout>
     )
   }
 }
