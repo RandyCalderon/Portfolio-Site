@@ -4,8 +4,7 @@ import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'
 const ContactLinks = () => {
   return (
     <div className="ui simple dropdown item">
-      Social
-      <i className="dropdown icon" />
+      <i className="dropdown icon" style={{fontSize: '18px', fontWeight: 700}}>Social</i>
       <div className="menu">
         <a
           className="item"

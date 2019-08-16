@@ -3,11 +3,12 @@ import { css } from '@emotion/core'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import About from '../components/sections/about'
+import Projects from '../components/sections/projects'
 
 const background = css`
   position: absolute;
   width: 100%;
-  height: 80%;
+  height: 100%;
   z-index: 0;
 `
 // Container for image and text
@@ -42,6 +43,7 @@ class Home extends React.Component {
             <h2 style={{ color: 'white' }} css={blurbContainer}>Software Engineer interested in education, environmentalism and UI/UX</h2>
             </div>
             <About/>
+            <Projects/>
           </Layout>
       </div>
     )

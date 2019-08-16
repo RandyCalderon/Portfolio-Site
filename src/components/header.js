@@ -68,18 +68,18 @@ const Header = () => (
     <nav>
       <ul css={navStyling}>
         <li>
-          <Link to={'/about'} css={remove} activeStyle={activeStyles}>
+          <Link to={'#about'} css={remove} activeStyle={activeStyles}>
             About
+          </Link>
+        </li>
+        <li>
+          <Link to={'#projects'} css={remove} activeStyle={activeStyles}>
+            Projects
           </Link>
         </li>
         <li>
           <Link to={'/blog'} css={remove} activeStyle={activeStyles}>
             Blog
-          </Link>
-        </li>
-        <li>
-          <Link to={'/projects'} css={remove} activeStyle={activeStyles}>
-            Projects
           </Link>
         </li>
       </ul>

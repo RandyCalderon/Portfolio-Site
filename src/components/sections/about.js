@@ -1,18 +1,17 @@
 import React, { Component } from 'react'
 import { css } from '@emotion/core'
-import Contact from '../about/contact'
 import ContactLinks from '../about/contactlinks'
-import Email from '../about/email'
 
 // Container Margin
 const margin = css`
-  margin-top: 40px;
+  margin-top: 20px;
 `
 
 // About me Header
 const header = css`
   font-type: candara;
   letter-spacing: 3px;
+  text-align: center;
 `
 
 // About me text
@@ -25,10 +24,15 @@ const clipCircle = css`
   clip-path: circle(120px at center);
 `
 
+// Skills bullet text
+const bulletText = css`
+  font-size: 10;
+`
+
 export default class About extends Component {
   render() {
     return (
-        <div css={margin}>
+        <div css={margin} id="about">
           <div className="ui stackable grid container">
             <div className="left aligned four wide column">
               <img
@@ -48,14 +52,35 @@ export default class About extends Component {
                 that affects the education model in a positive way and/or brings
                 more awareness to our environmental issues.
               </p>
-            </div>
-          </div>
-          <div className="ui stackable grid container">
-            <div className="left aligned four wide column">
-              <Contact />
-            </div>
-            <div className="left aligned twelve wide column">
-              <Email />
+              <h3 css={header}>Skills</h3>
+              <div className="center aligned ui equal width grid">
+              <div className="column">
+              <h4>Front-End</h4>
+              <ul>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React/Redux</li>
+              <li>Jest/Enzyme</li>
+              <li>HTML/CSS</li>
+              </ul>
+              </div>
+              <div className="column">
+              <h4>Back-end</h4>
+              <ul>
+              <li>Node.js</li>
+              <li>Java</li>
+              <li>MySQL</li>
+              <li>Mongo</li>
+              <li>GraphQL</li>
+              </ul>
+              </div>
+              <div className="column">
+              <h4>Tools</h4>
+              <li>Git</li>
+              <li>Docker</li>
+              <li>Kubernetes</li>
+              </div>
+              </div>
             </div>
           </div>
         </div>
