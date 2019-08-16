@@ -4,23 +4,29 @@ import Cards from '../project/cards'
 
 // Margin Container
 const margin = css`
-  margin-top: 40px;
-  margin-bottom: 40px;
+  background-color: black;
 `
 
 // Header container
 const header = css`
+  color: white;
   text-align: center;
   font-family: candara;
   font-weight: 700;
   letter-spacing: 3px;
+  padding-top: 40px;
+`
+
+// Padding for card
+const padding = css`
+  padding-bottom: 40px;
 `
 
 const Projects = () => {
   return (
       <div css={margin} id="projects">
-        <h2 css={header}>Projects</h2>
-        <Cards />
+      <h2 css={header}>Projects</h2>  
+      <Cards css={padding}/>
       </div>
   )
 }
