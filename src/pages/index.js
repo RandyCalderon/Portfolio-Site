@@ -4,6 +4,7 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import About from '../components/sections/about'
 import Projects from '../components/sections/projects'
+import Carousel from '../components/project/carousel'
 
 const background = css`
   position: absolute;

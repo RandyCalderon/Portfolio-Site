@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import Cards from '../project/cards'
+import Cards from '../project/anchoredcard'
+import Carousel from '../project/carousel'
 
 // Margin Container
 const margin = css`
@@ -22,11 +23,12 @@ const padding = css`
   padding-bottom: 40px;
 `
 
+
 const Projects = () => {
   return (
       <div css={margin} id="projects">
       <h2 css={header}>Projects</h2>  
-      <Cards css={padding}/>
+      <Carousel/>
       </div>
   )
 }
