@@ -16,6 +16,7 @@ const Container = () => {
 			}
 	    },
 	];
+	
 	return (
 		<div>
 			<Carousel
