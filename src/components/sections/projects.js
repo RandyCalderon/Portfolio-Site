@@ -23,7 +23,7 @@ const header = css`
 
 // Padding for card
 const padding = css`
-  padding-bottom: 40px;
+  padding-bottom: 38px;
 `
 
 
