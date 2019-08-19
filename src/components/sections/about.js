@@ -5,6 +5,8 @@ import ContactLinks from '../about/contactlinks'
 // Container Margin
 const margin = css`
   margin-top: 20px;
+  width: 100vw;
+  height: 100vh;
 `
 
 // About me Header

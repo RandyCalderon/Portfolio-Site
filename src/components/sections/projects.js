@@ -6,6 +6,7 @@ import Carousel from '../project/carousel'
 // Margin Container
 const margin = css`
   background-color: black;
+  height: 100vh;
 `
 
 // Header container

@@ -22,8 +22,7 @@ const Container = () => {
 			<Carousel
 				elements  =  {  elements  }
 				animation  ='slide left'
-				showNextPrev  =  {false}
-				showIndicators  ={true}
+				showNextPrev  =  {true}
 			/>
 		</div>
 	)
