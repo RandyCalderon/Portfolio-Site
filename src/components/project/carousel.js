@@ -15,7 +15,7 @@ const Container = () => {
 				return <PTCard />
 			}
 	    },
-	]~
+	]
 	return (
 		<div>
 			<Carousel
