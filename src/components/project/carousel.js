@@ -1,6 +1,5 @@
-import  React  from  'react';
-import  Carousel  from  'semantic-ui-carousel-react';
-import { Button } from  'semantic-ui-react'
+import React  from  'react';
+import Carousel  from  'semantic-ui-carousel-react';
 import AnchoredCard from './anchoredCard';
 import PTCard from './ptbotCard'
 
@@ -16,7 +15,7 @@ const Container = () => {
 				return <PTCard />
 			}
 	    },
-	]
+	]~
 	return (
 		<div>
 			<Carousel

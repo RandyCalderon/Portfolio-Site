@@ -1,6 +1,5 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import Cards from '../project/anchoredcard'
 import Carousel from '../project/carousel'
 
 // Margin Container
