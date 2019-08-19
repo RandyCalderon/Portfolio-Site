@@ -2,7 +2,8 @@ import React from 'react'
 import { Card } from 'semantic-ui-react'
 import { css } from '@emotion/core'
 import { FaGithub } from 'react-icons/fa'
-import img from '../../images/Anchord.png'
+import img from '../../images/PTBot.png'
+import PTBotPopup from './ptbotPopup'
 
 // Css styling for header for card
 const headerStyle = css`
@@ -17,7 +18,7 @@ const headerStyle = css`
 const iconSize = css`
   width: 30px;
   height: 30px;
-  color: black;
+  color: white;
 `
 // Flex for links
 const linkFlex = css`
@@ -32,7 +33,7 @@ const clean = css`
 `
 
 // Header config for card
-const header = <h2 css={headerStyle}>Anchored App</h2>
+const header = <h2 css={headerStyle}>PTb0t App</h2>
 
 // Main Card Styling
 const card = css`
@@ -41,27 +42,25 @@ const card = css`
 `
 
 // Anchord Project description
-const anchordDesc = (
+const ptbotDesc = (
   <div>
     <p>
-      Anchored utilizes Chainpoint's innovative technology which allows users to
-      securely link a hash of their data, such as important documents, to the
-      Bitcoin blockchain. After logging in, users can connect with third party
-      applications such as DocuSign and get timestamp proofs for any file. By
-      associating data to a tamper-proof, immutable ledger, it can be
-      mathematically proven that the data existed at an exact time and place.
+      PTb0t is a free open-source Slack bot that automatically sends away messages when you are on vacation. Schedule vacation times in Slack or on our dashboard and your vacation is added to your Google Calendar. Create custom messages for specific channels or users, or set an automated message for any time you're mentioned while you're OOO.
     </p>
     <div css={linkFlex}>
+    <div>
       <a
-        href="https://github.com/Lambda-School-Labs/anchored.app"
+        href="https://github.com/labsce1-ptbot?type=source"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FaGithub css={iconSize} />
       </a>
+      <PTBotPopup/>
+      </div>
       <a
         css={clean}
-        href="https://anchored.app/"
+        href="https://ptbot.netlify.com/"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -73,11 +72,12 @@ const anchordDesc = (
 
 const cards = () => (
   <Card
+    style={{background: 'black'}}
     css={card}
     className="ui text container"
     image={img}
     header={header}
-    description={anchordDesc}
+    description={ptbotDesc}
   />
 )
 

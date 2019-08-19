@@ -4,10 +4,11 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 const mainContainer = css`
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
-  background: black;
+  background: none;
+  position: fixed;
   height: 60px;
   border-bottom: 2px solid white;
 `
@@ -68,18 +69,18 @@ const Header = () => (
     <nav>
       <ul css={navStyling}>
         <li>
-          <Link to={'/about'} css={remove} activeStyle={activeStyles}>
+          <Link to={'#about'} css={remove} activeStyle={activeStyles}>
             About
+          </Link>
+        </li>
+        <li>
+          <Link to={'#projects'} css={remove} activeStyle={activeStyles}>
+            Projects
           </Link>
         </li>
         <li>
           <Link to={'/blog'} css={remove} activeStyle={activeStyles}>
             Blog
-          </Link>
-        </li>
-        <li>
-          <Link to={'/projects'} css={remove} activeStyle={activeStyles}>
-            Projects
           </Link>
         </li>
       </ul>

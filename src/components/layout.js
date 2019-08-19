@@ -21,6 +21,9 @@ const foot = css`
   width: 100%;
   text-align: center;
   background: black;
+  border-top: 2px solid white;
+  padding-top: 10px;
+  font-weight: 700;
 `
 
 const Layout = ({ children }) => (
