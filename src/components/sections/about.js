@@ -78,9 +78,10 @@ export default class About extends Component {
               </div>
               <div className="column">
               <h4>Tools</h4>
-              <li>Git</li>
+              <ul>              <li>Git</li>
               <li>Docker</li>
               <li>Kubernetes</li>
+              </ul>
               </div>
               </div>
             </div>
