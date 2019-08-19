@@ -4,10 +4,11 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 const mainContainer = css`
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
-  background: black;
+  background: none;
+  position: fixed;
   height: 60px;
   border-bottom: 2px solid white;
 `

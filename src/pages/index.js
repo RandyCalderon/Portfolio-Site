@@ -40,7 +40,7 @@ class Home extends React.Component {
         <Layout>
           <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
           <div css-={mainContainer}>
-          <img style={{'width': '100vw', 'height': '94vh'}} src="https://res.cloudinary.com/deqko80pg/image/upload/e_blackwhite,e_auto_contrast,h_1080,w_1920/v1554772298/portbackgroundEdit.jpg"/>
+          <img style={{'width': '100vw', 'height': '100vh', marginBottom: '0'}} src="https://res.cloudinary.com/deqko80pg/image/upload/e_blackwhite,e_auto_contrast,h_1080,w_1920/v1554772298/portbackgroundEdit.jpg"/>
             <h2 style={{ color: 'white' }} css={blurbContainer}>Software Engineer interested in education, environmentalism and UI/UX</h2>
             </div>
             <About/>

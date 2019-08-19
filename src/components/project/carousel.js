@@ -8,21 +8,21 @@ const Container = () => {
 	let  elements  = [
 		{
 			render:()=>{
-				return <AnchoredCard/>
+				return <AnchoredCard />
 			}
 		},
 		{
 			render:()=>{
-				return <PTCard/>
+				return <PTCard />
 			}
 	    },
 	]
 	return (
 		<div>
 			<Carousel
-				elements  =  {  elements  }
-				animation  ='slide left'
-				showNextPrev  =  {true}
+			elements  =  {  elements  }
+			animation  ='slide left'
+			showNextPrev  =  {true}
 			/>
 		</div>
 	)

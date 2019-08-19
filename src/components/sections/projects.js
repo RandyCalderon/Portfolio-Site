@@ -5,8 +5,10 @@ import Carousel from '../project/carousel'
 
 // Margin Container
 const margin = css`
-  background-color: black;
+  width: 100vw;
   height: 100vh;
+  background-color: rgb(149, 165, 166);
+  color: white;
 `
 
 // Header container
@@ -29,7 +31,7 @@ const Projects = () => {
   return (
       <div css={margin} id="projects">
       <h2 css={header}>Projects</h2>  
-      <Carousel/>
+      <Carousel />
       </div>
   )
 }

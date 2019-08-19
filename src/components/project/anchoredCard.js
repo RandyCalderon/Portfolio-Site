@@ -18,7 +18,7 @@ const headerStyle = css`
 const iconSize = css`
   width: 30px;
   height: 30px;
-  color: black;
+  color: white;
 `
 // Flex for links
 const linkFlex = css`
@@ -35,6 +35,12 @@ const clean = css`
 // Header config for card
 const header = <h2 css={headerStyle}>Anchored App</h2>
 
+// Desc Background
+const desc = css`
+background: black;
+color: white;
+`
+
 // Main Card Styling
 const card = css`
   width: 100% !important;
@@ -43,7 +49,7 @@ const card = css`
 
 // Anchord Project description
 const anchordDesc = (
-  <div>
+  <div css={desc}>
     <p>
       Anchored utilizes Chainpoint's innovative technology which allows users to
       securely link a hash of their data, such as important documents, to the
@@ -77,6 +83,7 @@ const anchordDesc = (
 
 const cards = () => (
   <Card
+    style={{backgroundColor: 'black'}}
     css={card}
     className="ui text container"
     image={img}

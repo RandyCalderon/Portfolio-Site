@@ -18,7 +18,7 @@ const headerStyle = css`
 const iconSize = css`
   width: 30px;
   height: 30px;
-  color: black;
+  color: white;
 `
 // Flex for links
 const linkFlex = css`
@@ -72,6 +72,7 @@ const ptbotDesc = (
 
 const cards = () => (
   <Card
+    style={{background: 'black'}}
     css={card}
     className="ui text container"
     image={img}
