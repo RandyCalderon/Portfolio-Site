@@ -53,6 +53,7 @@ const anchordDesc = (
       mathematically proven that the data existed at an exact time and place.
     </p>
     <div css={linkFlex}>
+    <div>
       <a
         href="https://github.com/Lambda-School-Labs/anchored.app"
         target="_blank"
@@ -60,7 +61,8 @@ const anchordDesc = (
       >
         <FaGithub css={iconSize} />
       </a>
-      <AnchorPopup/>
+      <AnchorPopup />
+      </div>
       <a
         css={clean}
         href="https://anchored.app/"
