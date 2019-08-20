@@ -3,7 +3,7 @@ import Carousel  from  'semantic-ui-carousel-react';
 import AnchoredCard from './anchoredCard';
 import PTCard from './ptbotCard'
 
-const Container = () => {
+const Container = ({className}) => {
 	let  elements  = [
 		{
 			render:()=>{
@@ -18,13 +18,11 @@ const Container = () => {
 	];
 	
 	return (
-		<div>
 			<Carousel
 			elements  =  {  elements  }
 			animation  ='slide left'
 			showNextPrev  =  {true}
 			/>
-		</div>
 	)
 
 }

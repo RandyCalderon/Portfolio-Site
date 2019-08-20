@@ -4,7 +4,7 @@ import ContactLinks from '../about/contactlinks'
 
 // Container Margin
 const margin = css`
-  width: 100vw;
+  width: 100vw !important;
   height: 100vh;
   background-color: rgb(149, 165, 166);
   color: white;
@@ -36,8 +36,8 @@ export default class About extends Component {
   render() {
     return (
         <div css={margin} id="about">
-          <div className="ui stackable grid container">
-            <div className="left aligned four wide column">
+          <div className="ui stackable grid">
+            <div style={{paddingLeft: '60px', paddingTop: '40px'}} className="left aligned four wide column">
               <img
                 css={clipCircle}
                 src="https://res.cloudinary.com/deqko80pg/image/upload/c_fit,h_250,r_0,w_250,x_0,y_0/v1547202723/Randy.jpg"

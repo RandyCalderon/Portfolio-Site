@@ -20,18 +20,13 @@ const header = css`
   padding-top: 40px;
 `
 
-// Padding for card
-const padding = css`
-  padding-bottom: 38px;
-`
-
 
 const Projects = () => {
   return (
-      <div css={margin} id="projects">
+      <Bg css={margin} id="projects">
       <h2 css={header}>Projects</h2>  
       <Carousel />
-      </div>
+      </Bg>
   )
 }
 
