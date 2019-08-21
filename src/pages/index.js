@@ -4,7 +4,7 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import About from '../components/sections/about'
 import Projects from '../components/sections/projects'
-import Carousel from '../components/project/carousel'
+import Contact from '../components/sections/contact'
 
 const background = css`
   position: absolute;
@@ -45,6 +45,7 @@ class Home extends React.Component {
             </div>
             <About/>
             <Projects/>
+            <Contact/>
           </Layout>
       </div>
     )

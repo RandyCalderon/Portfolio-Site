@@ -1,13 +1,12 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import Cards from '../project/anchoredcard'
 import Carousel from '../project/carousel'
 
 // Margin Container
 const margin = css`
   width: 100vw;
   height: 100vh;
-  background-color: rgb(149, 165, 166);
+  background-color: black;
   color: white;
 `
 
@@ -19,11 +18,7 @@ const header = css`
   font-weight: 700;
   letter-spacing: 3px;
   padding-top: 40px;
-`
-
-// Padding for card
-const padding = css`
-  padding-bottom: 40px;
+  font-size: 50px;
 `
 
 
