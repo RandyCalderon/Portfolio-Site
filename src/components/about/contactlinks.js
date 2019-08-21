@@ -1,10 +1,17 @@
 import React from 'react'
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'
+import { css } from '@emotion/core'
+
+const contact = css`
+  color: white;
+  font-family: 'candara';
+  font-size: 24px;
+`
 
 const ContactLinks = () => {
   return (
-    <div className="ui simple dropdown item">
-      <i className="dropdown icon" style={{fontSize: '18px', fontWeight: 700}}>Social</i>
+    <div className="ui simple dropdown item" css={contact}>
+      <i className="dropdown icon" >Social</i>
       <div className="menu">
         <a
           className="item"

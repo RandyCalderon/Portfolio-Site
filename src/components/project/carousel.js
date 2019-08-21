@@ -10,7 +10,7 @@ const container = css`
 `
 
 
-const Container = ({className}) => {
+const Container = () => {
 	let  elements  = [
 		{
 			render:()=>{
