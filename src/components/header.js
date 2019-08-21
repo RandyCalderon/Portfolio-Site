@@ -10,7 +10,6 @@ const mainContainer = css`
   background: none;
   position: fixed;
   height: 60px;
-  border-bottom: 2px solid white;
 `
 
 const navStyling = css`
@@ -67,7 +66,7 @@ const activeStyles = {
 
 
 const Header = () => (
-  <div  css={mainContainer} style={{backgroundColor: 'black', zIndex: 1 }} id="navigation">
+  <div  css={mainContainer} id="navigation">
     <h2 css={font}>Randy Calderon</h2>
     <nav>
       <ul css={navStyling}>
