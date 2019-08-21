@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import * as emailjs from 'emailjs-com'
+import { css } from '@emotion/core'
 
+const container = css`
+  width: 30vw !important;
+  margin: 0 auto;
+`
 export default class Email extends Component {
   state = {
     message: '',
@@ -10,34 +15,34 @@ export default class Email extends Component {
   }
 
   handleMessage = event => {
-      this.setState({
-        message: event.target.value,
-      })
+    this.setState({
+      message: event.target.value,
+    })
   }
 
   handleName = event => {
-      this.setState({
-        name: event.target.value,
-      })
+    this.setState({
+      name: event.target.value,
+    })
   }
 
   handleEmail = event => {
-      this.setState({
-        email: event.target.value,
-      })
-    }
+    this.setState({
+      email: event.target.value,
+    })
+  }
 
   handleSubmit = event => {
     event.preventDefault()
-    if(this.state.name == "" || this.state.email == "" || this.state.message == "") {
+    if (this.state.name == "" || this.state.email == "" || this.state.message == "") {
       alert("Please fill in the empty fields")
     } else {
-    this.sendEmail(this.state.name, this.state.email, this.state.message)
-    this.setState({
-      emailSubmitted: true,
-    })
-  }  
-}
+      this.sendEmail(this.state.name, this.state.email, this.state.message)
+      this.setState({
+        emailSubmitted: true,
+      })
+    }
+  }
 
   sendEmail(name, email, message) {
     let receiver = process.env.GATSBY_EMAILJS_RECEIVER
@@ -66,14 +71,13 @@ export default class Email extends Component {
 
   render() {
     return (
-      <form className="ui form success" onSubmit={this.handleSubmit}>
+      <form className="ui form success" css={container} onSubmit={this.handleSubmit}>
         <h3>Message me</h3>
         <div className="inline fields">
           <div className="eight wide field">
-            <label htmlFor="name">Name</label>
             <input
               type="text"
-              placeholder="name"
+              placeholder="Name"
               name="name"
               onChange={this.handleName}
               value={this.state.name}
@@ -82,10 +86,9 @@ export default class Email extends Component {
         </div>
         <div className="inline fields">
           <div className="eight wide field">
-            <label htmlFor="email">Email</label>
             <input
               type="text"
-              placeholder="email"
+              placeholder="Email"
               name="email"
               onChange={this.handleEmail}
               value={this.state.email}
@@ -93,7 +96,6 @@ export default class Email extends Component {
           </div>
         </div>
         <div className="field">
-          <label htmlFor="message">Message</label>
           <textarea
             name="message"
             onChange={this.handleMessage}
@@ -103,7 +105,7 @@ export default class Email extends Component {
           />
         </div>
         <div>
-          <input className="ui button" type="submit" value="Submit" />
+          <input style={{ backgroundColor: 'black', color: 'white' }} className="ui button" type="submit" value="Send Message" />
         </div>
       </form>
     )

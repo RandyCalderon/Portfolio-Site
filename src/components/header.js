@@ -67,7 +67,7 @@ const activeStyles = {
 
 
 const Header = () => (
-  <div  css={mainContainer} style={{backgroundColor: 'black', zIndex: 1}} id="navigation">
+  <div  css={mainContainer} style={{backgroundColor: 'black', zIndex: 1 }} id="navigation">
     <h2 css={font}>Randy Calderon</h2>
     <nav>
       <ul css={navStyling}>
