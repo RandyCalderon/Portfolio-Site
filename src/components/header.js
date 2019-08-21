@@ -2,6 +2,7 @@ import { Link } from 'gatsby'
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
+import ContactLinks from '../components/about/contactlinks'
 
 const mainContainer = css`
   width: 100vw;
@@ -14,19 +15,22 @@ const mainContainer = css`
 
 const navStyling = css`
   font-size: 18px;
-  width: 250px;
+  width: 400px;
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
   padding-right: 20px;
   line-height: 3;
+
   
   @media screen and (max-width: 360px) {
     width: 200px;
   }
 `
 const remove = css`
+  font-family: 'candara';
   text-decoration: none;
+  font-size: 24px;
   color: white;
   &:hover {
     color: white;
@@ -45,8 +49,8 @@ const remove = css`
 const font = css`
   font-family: 'Qwigley', cursive;
   color: white;
-  line-height: 2;
-
+  line-height: 2.5;
+  font-size: 30px;
   @media screen and (max-width: 450px) {
     line-height: 2.75;
     font-size: 22px;
@@ -85,7 +89,10 @@ const Header = () => (
             Blog
           </Link>
         </li>
-      </ul>
+        <li>
+          <ContactLinks css={remove} activeStyle={activeStyles}/>
+        </li>
+        </ul>
     </nav>
   </div>
 )
