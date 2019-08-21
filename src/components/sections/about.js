@@ -41,8 +41,9 @@ export default class About extends Component {
             <div style={{paddingLeft: '60px', paddingTop: '40px'}} className="left aligned four wide column">
               <img
                 css={clipCircle}
-                src="https://res.cloudinary.com/deqko80pg/image/upload/c_fit,h_250,r_0,w_250,x_0,y_0/v1547202723/Randy.jpg"
+                src="https://res.cloudinary.com/deqko80pg/image/upload/c_fit,h_250,r_0,w_250,x_0,y_0/v1566414086/Randy.png"
                 alt="profilepic"
+                
               />
               <ContactLinks />
             </div>
