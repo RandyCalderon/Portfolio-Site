@@ -20,7 +20,8 @@ const header = css`
 
 // About me text
 const text = css`
-  font-size: 20px;
+  font-size: 26px;
+  font-family: candara;
 `
 
 const clipCircle = css`
