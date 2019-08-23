@@ -28,6 +28,9 @@ const text = css`
 const bulletText = css`
   font-size: 28px;
   line-height: 1;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `
 
 export default class About extends Component {
