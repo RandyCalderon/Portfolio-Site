@@ -27,6 +27,11 @@ const blurbContainer = css`
   font-weight: 700;
   line-height: 2;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    left: 58%;
+  }
 `
 
 class Home extends React.Component {
@@ -40,13 +45,20 @@ class Home extends React.Component {
         <Layout>
           <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
           <div css-={mainContainer}>
-          <img style={{'width': '100vw', 'height': '100vh', marginBottom: '0'}} src="https://res.cloudinary.com/deqko80pg/image/upload/e_blackwhite,e_auto_contrast,h_1080,w_1920/v1554772298/portbackgroundEdit.jpg"/>
-            <h2 style={{ color: 'white' }} css={blurbContainer}>Software Engineer interested in education, environmentalism and UI/UX</h2>
-            </div>
-            <About/>
-            <Projects/>
-            <Contact/>
-          </Layout>
+            <img
+              alt="black and white background city"
+              style={{ width: '100vw', height: '100vh', marginBottom: '0' }}
+              src="https://res.cloudinary.com/deqko80pg/image/upload/e_blackwhite,e_auto_contrast,h_1080,w_1920/v1554772298/portbackgroundEdit.jpg"
+            />
+            <h2 style={{ color: 'white' }} css={blurbContainer}>
+              Software Engineer interested in education, environmentalism and
+              UI/UX
+            </h2>
+          </div>
+          <About />
+          <Projects />
+          <Contact />
+        </Layout>
       </div>
     )
   }

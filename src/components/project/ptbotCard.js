@@ -45,18 +45,22 @@ const card = css`
 const ptbotDesc = (
   <div>
     <p>
-      PTb0t is a free open-source Slack bot that automatically sends away messages when you are on vacation. Schedule vacation times in Slack or on our dashboard and your vacation is added to your Google Calendar. Create custom messages for specific channels or users, or set an automated message for any time you're mentioned while you're OOO.
+      PTb0t is a free open-source Slack bot that automatically sends away
+      messages when you are on vacation. Schedule vacation times in Slack or on
+      our dashboard and your vacation is added to your Google Calendar. Create
+      custom messages for specific channels or users, or set an automated
+      message for any time you're mentioned while you're OOO.
     </p>
     <div css={linkFlex}>
-    <div>
-      <a
-        href="https://github.com/labsce1-ptbot?type=source"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaGithub css={iconSize} />
-      </a>
-      <PTBotPopup/>
+      <div>
+        <a
+          href="https://github.com/labsce1-ptbot?type=source"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub css={iconSize} />
+        </a>
+        <PTBotPopup />
       </div>
       <a
         css={clean}
@@ -72,7 +76,7 @@ const ptbotDesc = (
 
 const cards = () => (
   <Card
-    style={{background: 'black'}}
+    style={{ background: 'black' }}
     css={card}
     className="ui text container"
     image={img}

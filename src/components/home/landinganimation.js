@@ -46,7 +46,7 @@
 //       <div css={[flex, white]}>
 //         <h2 css={fontSize}>FrontEnd web developer interested in</h2>
 //         <div>
-        
+
 //             <Transition
 //               native
 //               items={this.state.items}

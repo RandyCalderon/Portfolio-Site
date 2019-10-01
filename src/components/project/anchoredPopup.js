@@ -1,46 +1,55 @@
 import React from 'react'
-import { Button, Popup } from 'semantic-ui-react'
+import { Popup } from 'semantic-ui-react'
 import { FaServicestack } from 'react-icons/fa'
 
 const style = {
-    borderRadius: 0,
-    opacity: 0.8,
-    padding: '2em',
-    background: 'black',
-    color: 'white',
-    fontSize: '14px'
+  borderRadius: 0,
+  opacity: 0.8,
+  padding: '2em',
+  background: 'black',
+  color: 'white',
+  fontSize: '14px',
 }
 
 const Stack = () => {
-    return(
-        <div style={{width: '500px'}}>        
-        <h1 style={{textAlign: 'center'}}>Tech Stack</h1>
-        <div style={{columns: '1 auto'}}>
+  return (
+    <div style={{ width: '500px' }}>
+      <h1 style={{ textAlign: 'center' }}>Tech Stack</h1>
+      <div style={{ columns: '1 auto' }}>
         <h2>FrontEnd</h2>
         <ul>
-        <li>React</li>
-        <li>Redux</li>
-        <li>Styled Components</li>
+          <li>React</li>
+          <li>Redux</li>
+          <li>Styled Components</li>
         </ul>
-        </div>
-        <div style={{columns: '1 auto'}}>
+      </div>
+      <div style={{ columns: '1 auto' }}>
         <h2>BackEnd/API</h2>
         <ul>
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Docusign API</li>
-        <li>Chainpoint API</li>
-        <li>Stripe API</li>
-        <li>Auth0</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>PostgreSQL</li>
+          <li>Docusign API</li>
+          <li>Chainpoint API</li>
+          <li>Stripe API</li>
+          <li>Auth0</li>
         </ul>
-        </div>
-        </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 const anchoredPopup = () => (
-  <Popup style={style} content={Stack} trigger={<FaServicestack style={{width: '30px', height: '30px', marginLeft: '10px'}}/>} basic />
+  <Popup
+    style={style}
+    content={Stack}
+    trigger={
+      <FaServicestack
+        style={{ width: '30px', height: '30px', marginLeft: '10px' }}
+      />
+    }
+    basic
+  />
 )
 
 export default anchoredPopup

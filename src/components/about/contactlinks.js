@@ -11,7 +11,7 @@ const contact = css`
 const ContactLinks = () => {
   return (
     <div className="ui simple dropdown item" css={contact}>
-      <i className="dropdown icon" >Social</i>
+      <i className="dropdown icon">Social</i>
       <div className="menu">
         <a
           className="item"

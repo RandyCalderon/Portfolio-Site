@@ -21,13 +21,12 @@ const header = css`
   font-size: 50px;
 `
 
-
 const Projects = () => {
   return (
-      <div css={margin} id="projects">
-      <h2 css={header}>Projects</h2>  
+    <div css={margin} id="projects">
+      <h2 css={header}>Projects</h2>
       <Carousel />
-      </div>
+    </div>
   )
 }
 
