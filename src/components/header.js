@@ -22,7 +22,6 @@ const navStyling = css`
   padding-right: 20px;
   line-height: 3;
 
-  
   @media screen and (max-width: 360px) {
     width: 200px;
   }
@@ -66,11 +65,8 @@ const activeStyles = {
   paddingBottom: '5px',
 }
 
-
-
-
 const Header = () => (
-  <div  css={mainContainer} id="navigation">
+  <div css={mainContainer} id="navigation">
     <h2 css={font}>Randy Calderon</h2>
     <nav>
       <ul css={navStyling}>
@@ -90,9 +86,9 @@ const Header = () => (
           </Link>
         </li>
         <li>
-          <ContactLinks css={remove} activeStyle={activeStyles}/>
+          <ContactLinks css={remove} activeStyle={activeStyles} />
         </li>
-        </ul>
+      </ul>
     </nav>
   </div>
 )

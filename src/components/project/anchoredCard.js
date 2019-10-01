@@ -37,8 +37,8 @@ const header = <h2 css={headerStyle}>Anchored App</h2>
 
 // Desc Background
 const desc = css`
-background: black;
-color: white;
+  background: black;
+  color: white;
 `
 
 // Main Card Styling
@@ -59,15 +59,15 @@ const anchordDesc = (
       mathematically proven that the data existed at an exact time and place.
     </p>
     <div css={linkFlex}>
-    <div>
-      <a
-        href="https://github.com/Lambda-School-Labs/anchored.app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaGithub css={iconSize} />
-      </a>
-      <AnchorPopup />
+      <div>
+        <a
+          href="https://github.com/Lambda-School-Labs/anchored.app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub css={iconSize} />
+        </a>
+        <AnchorPopup />
       </div>
       <a
         css={clean}
@@ -83,7 +83,7 @@ const anchordDesc = (
 
 const cards = () => (
   <Card
-    style={{backgroundColor: 'black'}}
+    style={{ backgroundColor: 'black' }}
     css={card}
     className="ui text container"
     image={img}

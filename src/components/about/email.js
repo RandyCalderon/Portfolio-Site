@@ -3,9 +3,16 @@ import * as emailjs from 'emailjs-com'
 import { css } from '@emotion/core'
 
 const container = css`
-  width: 30vw !important;
+  width: 50% !important;
   margin: 0 auto;
+  resize: vertical;
 `
+const buttonStyle = css`
+  background-color: black !important;
+  color: white !important;
+  border: 1px solid white !important;
+`
+
 export default class Email extends Component {
   state = {
     message: '',
@@ -34,8 +41,12 @@ export default class Email extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    if (this.state.name == "" || this.state.email == "" || this.state.message == "") {
-      alert("Please fill in the empty fields")
+    if (
+      this.state.name === '' ||
+      this.state.email === '' ||
+      this.state.message === ''
+    ) {
+      alert('Please fill in the empty fields')
     } else {
       this.sendEmail(this.state.name, this.state.email, this.state.message)
       this.setState({
@@ -71,7 +82,11 @@ export default class Email extends Component {
 
   render() {
     return (
-      <form className="ui form success" css={container} onSubmit={this.handleSubmit}>
+      <form
+        className="ui form success"
+        css={container}
+        onSubmit={this.handleSubmit}
+      >
         <h3>Message me</h3>
         <div className="inline fields">
           <div className="eight wide field">
@@ -105,7 +120,12 @@ export default class Email extends Component {
           />
         </div>
         <div>
-          <input style={{ backgroundColor: 'black', color: 'white' }} className="ui button" type="submit" value="Send Message" />
+          <input
+            css={buttonStyle}
+            className="ui button"
+            type="submit"
+            value="Send Message"
+          />
         </div>
       </form>
     )

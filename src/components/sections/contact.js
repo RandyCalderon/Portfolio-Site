@@ -4,23 +4,24 @@ import { css } from '@emotion/core'
 
 // Contact me Container
 const container = css`
-    color: white;
-    background-color: black;
+  color: white;
+  background-color: black;
+  padding-bottom: 40px;
 `
 // Header styling
 const header = css`
-    font-size: 50px;
-    text-align: center;
-    padding-top: 40px;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 40px;
 `
 
 const Contact = () => {
-    return(
-        <div css={container}>
-        <h2 css={header}>Contact</h2>
-        <Email/>
-        </div>
-    )
+  return (
+    <div css={container}>
+      <h2 css={header}>Contact</h2>
+      <Email />
+    </div>
+  )
 }
 
 export default Contact
