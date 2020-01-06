@@ -12,6 +12,7 @@ const background = css`
   height: 100vh;
   z-index: 0;
 `
+
 // Container for image and text
 const mainContainer = css`
   position: relative;
@@ -21,13 +22,13 @@ const mainContainer = css`
 const blurbContainer = css`
   position: absolute;
   top: 20%;
-  left: 75%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 30px;
   font-weight: 700;
   line-height: 2;
   width: 100%;
-
+  max-width: 1100px;
   @media screen and (max-width: 768px) {
     font-size: 20px;
     left: 58%;
