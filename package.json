@@ -9,7 +9,7 @@
     "@emotion/styled": "^10.0.6",
     "core-js": "^2.6.2",
     "emailjs-com": "^2.3.2",
-    "gatsby": "^2.0.85",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.0.25",
     "gatsby-plugin-emotion": "^4.0.1",
     "gatsby-plugin-manifest": "^2.0.13",
