@@ -22,6 +22,6 @@ jobs:
     runs-on: self-hosted
     needs: Build
     steps:
-      - name: Deploy to Blog Server
+      - name: Deploy to Dev-site Server
         run: |
-          rsync -avz --delete -e "ssh -i ~/.ssh/blog_deploy" dist/ deploy@<server_ip>:/var/www/dev_site
+          rsync -avz --delete -e "ssh -i ~/.ssh/dev_site" dist/ deploy@192.168.1.211:/var/www/dev_site
