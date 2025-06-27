@@ -1,0 +1,27 @@
+name: Build and deploy dev-site to proxmox server
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  # Build process
+  Build:
+    # This ensures the workhttps://github.com/RandyCalderon/Portfolio-Site/tree/master/.github/workflowsflow will run on our machine
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Static Site
+        run: |
+          npm install
+          npm run build
+  # Copy the output files from the astro build to the server
+  Deploy:
+    runs-on: self-hosted
+    needs: Build
+    steps:
+      - name: Deploy to Blog Server
+        run: |
+          rsync -avz --delete -e "ssh -i ~/.ssh/blog_deploy" dist/ deploy@<server_ip>:/var/www/dev_site
